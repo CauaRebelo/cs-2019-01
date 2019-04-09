@@ -1,12 +1,13 @@
-var a = prompt('Digite um numero n maior que 0 e menor e igual a 9999')
-if(a <= 0 && a > 9999)
+function propriedade3025(numero){
+if(numero <= 0 && numero > 9999)
 {
-console.log('Numero invalido')
+return(false);
 }
 else
 {
-var b = a/100;
+var b = numero/100;
 b = parseInt(b);
-var c = a%100;
-console.log(a == Math.pow(b+c, 2))
+var c = numero%100;
+return(numero == Math.pow(b+c, 2))
+}
 }

@@ -1,16 +1,17 @@
-var a = prompt('Digite um numero n maior e igual a 100 e menor e igual a 999')
-if(a >= 100 && a >= 999)
+function propriedade153(numero){
+if(numero >= 100 && numero >= 999)
 {
-console.log('Numero invalido')
+return(false)
 }
 else
 {
-var b = a/100;
+var b = numero/100;
 b = parseInt(b);
 var c = a%100;
 c= parseInt(c);
 var d = c/10;
 d= parseInt(d);
 var e = c%10;
-console.log(a == (Math.pow(b, 3) + Math.pow(d, 3) + Math.pow(e, 3)));
+return(numero == (Math.pow(b, 3) + Math.pow(d, 3) + Math.pow(e, 3)));
+}
 }
