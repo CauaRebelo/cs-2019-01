@@ -7,7 +7,7 @@ else
 {
 var b = numero/100;
 b = parseInt(b);
-var c = a%100;
+var c = numero%100;
 c= parseInt(c);
 var d = c/10;
 d= parseInt(d);
