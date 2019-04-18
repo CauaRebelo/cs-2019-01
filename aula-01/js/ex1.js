@@ -3,8 +3,7 @@ function propriedade3025(numero) {
         throw new RangeError("numero fora da faixa esperada");
     }
 
-    var b = numero / 100;
-    b = parseInt(b);
+    const b = parseInt(numero / 100);
     var c = numero % 100;
     return (numero == Math.pow(b + c, 2));
 }
