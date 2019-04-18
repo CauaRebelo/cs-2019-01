@@ -4,6 +4,6 @@ function propriedade3025(numero) {
     }
 
     const b = parseInt(numero / 100);
-    var c = numero % 100;
-    return (numero == Math.pow(b + c, 2));
+    const c = numero % 100;
+    return numero == Math.pow(b + c, 2);
 }
