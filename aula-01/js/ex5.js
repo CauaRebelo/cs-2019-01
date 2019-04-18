@@ -1,4 +1,5 @@
 function SomaNaturais(numero) {
+    // TODO reaplicar aqui sugestões em exercicios anteriores
     if (numero < 1) {
         return (false)
     } else {

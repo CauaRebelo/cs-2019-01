@@ -1,4 +1,5 @@
 function Produto(a, b) {
+    // TODO reaplicar aqui sugestões em exercicios anteriores
     if (a < 0 && b < 0) {
         return (false)
     } else {
@@ -19,6 +20,7 @@ function Produto(a, b) {
 }
 
 function Potencia(a, b) {
+    // TODO reaplicar aqui sugestões em exercicios anteriores
     if (a < 0 && b < 0) {
         return (false)
     } else {

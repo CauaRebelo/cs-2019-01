@@ -1,4 +1,5 @@
 function diadasemana(dia, mes, ano) {
+    // TODO reaplicar aqui sugestões em exercicios anteriores
     if (dia < 1 && dia > 31 && mes < 1 && mes > 12 && ano <= 1753) {
         return (false)
     } else {
