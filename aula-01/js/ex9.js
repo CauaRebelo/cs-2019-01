@@ -1,3 +1,4 @@
+module.exports = Pi;
 function Pi(n) {
     if (n <= 1) {
         throw new RangeError("Numero fora da faixa esperada");

@@ -1,3 +1,4 @@
+module.exports = RazaoAurea;
 function RazaoAurea(x, y, k) {
     if (x < 0 || y < x || k < 0) {
         throw new RangeError("Numero fora da faixa esperada");

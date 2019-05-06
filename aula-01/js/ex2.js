@@ -1,3 +1,4 @@
+module.exports = propriedade153;
 function propriedade153(numero) {
     if (numero <= 100 || numero >= 999) {
         throw new RangeError("Numero fora da faixa esperada");

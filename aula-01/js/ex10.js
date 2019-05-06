@@ -1,3 +1,4 @@
+module.exports = LogaritmoNatural;
 function LogaritmoNatural(n, k) {
     if (n < 1 || k < 2) {
         throw new RangeError("Numero fora da faixa esperada");

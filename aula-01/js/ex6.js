@@ -1,3 +1,4 @@
+module.exports = Fatorial;
 function Fatorial(numero) {
     if (numero < 1) {
         throw new RangeError("Numero fora da faixa esperada");

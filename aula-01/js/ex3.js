@@ -1,3 +1,4 @@
+module.exports = diadasemana;
 function diadasemana(dia, mes, ano) {
     if (dia < 1 || dia > 31 || mes < 1 || mes > 12 || ano <= 1753) {
         throw new RangeError("Numero fora da faixa esperada");

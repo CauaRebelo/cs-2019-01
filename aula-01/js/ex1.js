@@ -1,3 +1,4 @@
+module.exports = propriedade3025;
 function propriedade3025(numero) {
     if (numero <= 0 || numero > 9999) {
         throw new RangeError("numero fora da faixa esperada");

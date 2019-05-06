@@ -1,3 +1,4 @@
+module.exports = Produto;
 function Produto(a, b) {
     if (a < 0 || b < 0) {
         throw new RangeError("Numero fora da faixa esperada");

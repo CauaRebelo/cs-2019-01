@@ -1,3 +1,4 @@
+module.exports = SomaNaturais;
 function SomaNaturais(numero) {
     if (numero < 1) {
         throw new RangeError("Numero fora da faixa esperada");

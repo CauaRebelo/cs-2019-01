@@ -1,3 +1,4 @@
+module.exports = Raiz;
 function Raiz(n , i) {
     if (n < 0) {
         throw new RangeError("Numero fora da faixa esperada");
