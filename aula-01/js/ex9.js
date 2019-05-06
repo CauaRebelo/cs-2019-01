@@ -1,12 +1,3 @@
-/**
- * Retorna o pi com n precisao
- * 
- * @param {number} n Precisao do resultado
- *
- * @returns {number} Retorna pi com n precisao
- * 
- * @throws {RangeError} Se n for menor ou igual a 1
- */
 function Pi(n) {
     if (n <= 1) {
         throw new RangeError("Numero fora da faixa esperada");
