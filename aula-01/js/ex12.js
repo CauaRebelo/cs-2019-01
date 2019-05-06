@@ -5,8 +5,8 @@ function QuadradoPerfeito(n) {
     let i = 1;
     let s = 1;
     while (s < n) {
-    	i += 2;
-    	s += i;
+        i += 2;
+        s += i;
     }
     return s == n;
 }

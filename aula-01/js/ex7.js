@@ -5,14 +5,14 @@ function Produto(a, b) {
     let c = a;
     let d = b;
     if (b < a) {
-    	c = b;
-    	d = a;
+        c = b;
+        d = a;
     }
     let e = 1;
     let f = 0;
     while (e <= c) {
-    	f += d;
-    	e++;
+        f += d;
+        e++;
     }
     return f;
 }
