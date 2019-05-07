@@ -1,11 +1,11 @@
-const funcao = require("../ex1");
+const funcao = require("../ex2");
 
-test("3025 satisfaz (caso classico)", () => {
-    expect(funcao(3025)).toBe(true);
+test("153 satisfaz (caso classico)", () => {
+    expect(funcao(153)).toBe(true);
 });
 
-test("3024 nao satisfaz", () => {
-    expect(funcao(3024)).toBe(false);
+test("152 nao satisfaz", () => {
+    expect(funcao(152)).toBe(false);
 });
 
 test("argumento null/undefined", () => {
