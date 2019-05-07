@@ -7,9 +7,21 @@
  *
  * @returns {number} Retorna o resultado da soma, ou seja o resultado do produto
  * 
+ * @throws {Error} Se uma das entradas for nula ou nao definida
+ * @throws {TypeError} Se uma das entradas não for numero
+ * @throws {RangeError} Se uma das entradas não for inteiro
  * @throws {RangeError} Se a for menor que zero ou b for menor que zero
  */
 function Produto(a, b) {
+    if (a == null || a == undefined || b == null || b == undefined) {
+        throw new Error("Entrada invalidada, null e undefined nao sao entradas validas");
+    }
+    if (typeof(a) !== "number" || typeof(b) !== "number") {
+        throw new TypeError("Entrada nao e um numero");
+    }
+    if (Math.trunc(a) != a || Math.trunc(b) != b) {
+        throw new RangeError("Numero nao e inteiro");
+    }
     if (a < 0 || b < 0) {
         throw new RangeError("Numero fora da faixa esperada");
     }

@@ -6,9 +6,21 @@
  * 
  * @returns {boolean} Se o numero se aplica a propriedade 153 ou nao
  * 
+ * @throws {Error} Se a entrada for nula ou nao definida
+ * @throws {TypeError} Se a entrada não for numero
+ * @throws {RangeError} Se o numero não for inteiro
  * @throws {RangeError} Se o numero for menor ou igual a 100, ou se o numero foi maior ou igual a 999
  */
 function propriedade153(numero) {
+    if (numero == null || numero == undefined) {
+        throw new Error("Entrada invalidada, null e undefined nao sao entradas validas");
+    }
+    if (typeof(numero) !== "number") {
+        throw new TypeError("Entrada nao e um numero");
+    }
+    if (Math.trunc(numero) != numero) {
+        throw new RangeError("Numero nao e inteiro");
+    }
     if (numero <= 100 || numero >= 999) {
         throw new RangeError("Numero fora da faixa esperada");
     }

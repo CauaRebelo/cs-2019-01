@@ -7,10 +7,22 @@
  *
  * @returns {number} Retorna a raiz quadrada de n
  * 
- * @throws {RangeError} Se n for menor que 0
+ * @throws {Error} Se uma das entradas for nula ou nao definida
+ * @throws {TypeError} Se uma das entradas não for numero
+ * @throws {RangeError} Se uma das entradas não for inteiro
+ * @throws {RangeError} Se n ou i forem menor que 0
  */
 function Raiz(n , i) {
-    if (n < 0) {
+    if (n == null || n == undefined || i == null || i == undefined) {
+        throw new Error("Entrada invalidada, null e undefined nao sao entradas validas");
+    }
+    if (typeof(n) !== "number" || typeof(i) !== "number") {
+        throw new TypeError("Entrada nao e um numero");
+    }
+    if (Math.trunc(n) != n || Math.trunc(i) != i) {
+        throw new RangeError("Numero nao e inteiro");
+    }
+    if (n < 0 || i < 0) {
         throw new RangeError("Numero fora da faixa esperada");
     }
     let r = 1;
