@@ -10,7 +10,7 @@
  * @throws {RangeError} Se o n não for inteiro
  * @throws {RangeError} Se n for menor ou igual a 1
  */
-function Pi(n) {
+function pi(n) {
     if (n == null || n == undefined) {
         throw new Error("Entrada invalidada, null e undefined nao sao entradas validas");
     }
@@ -38,4 +38,4 @@ function Pi(n) {
     }
     return p;
 }
-module.exports = Pi;
+module.exports = pi;

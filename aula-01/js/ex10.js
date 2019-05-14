@@ -12,7 +12,7 @@
  * @throws {RangeError} Se uma das entradas não for inteiro
  * @throws {RangeError} Se n for menor que 1 ou se k for menor que 2
  */
-function LogaritmoNatural(n, k) {
+function logaritmoNatural(n, k) {
     if (n == null || n == undefined || k == null || k == undefined) {
         throw new Error("Entrada invalidada, null e undefined nao sao entradas validas");
     }
@@ -37,4 +37,4 @@ function LogaritmoNatural(n, k) {
     }
     return e;
 }
-module.exports = LogaritmoNatural;
+module.exports = logaritmoNatural;

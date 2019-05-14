@@ -12,7 +12,7 @@
  * @throws {RangeError} Se uma das entradas não for inteiro
  * @throws {RangeError} Se n ou i forem menor que 0
  */
-function Raiz(n , i) {
+function raiz(n , i) {
     if (n == null || n == undefined || i == null || i == undefined) {
         throw new Error("Entrada invalidada, null e undefined nao sao entradas validas");
     }
@@ -32,4 +32,4 @@ function Raiz(n , i) {
     }
     return r;
 }
-module.exports = Raiz;
+module.exports = raiz;

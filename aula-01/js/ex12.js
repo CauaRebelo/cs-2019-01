@@ -10,7 +10,7 @@
  * @throws {RangeError} Se o n não for inteiro
  * @throws {RangeError} Se n for menor que 1
  */
-function QuadradoPerfeito(n) {
+function quadradoPerfeito(n) {
     if (n == null || n == undefined) {
         throw new Error("Entrada invalidada, null e undefined nao sao entradas validas");
     }
@@ -31,4 +31,4 @@ function QuadradoPerfeito(n) {
     }
     return s == n;
 }
-module.exports = QuadradoPerfeito;
+module.exports = quadradoPerfeito;

@@ -10,7 +10,7 @@
  * @throws {RangeError} Se o numero não for inteiro
  * @throws {RangeError} Se numero for menor que 1
  */
-function Fatorial(numero) {
+function fatorial(numero) {
     if (numero == null || numero == undefined) {
         throw new Error("Entrada invalidada, null e undefined nao sao entradas validas");
     }
@@ -31,4 +31,4 @@ function Fatorial(numero) {
     }
     return b;
 }
-module.exports = Fatorial;
+module.exports = fatorial;

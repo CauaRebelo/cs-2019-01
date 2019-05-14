@@ -12,7 +12,7 @@
  * @throws {RangeError} Se uma das entradas não for inteiro
  * @throws {RangeError} Se a for menor que zero ou b for menor que zero
  */
-function Produto(a, b) {
+function produto(a, b) {
     if (a == null || a == undefined || b == null || b == undefined) {
         throw new Error("Entrada invalidada, null e undefined nao sao entradas validas");
     }
@@ -39,7 +39,7 @@ function Produto(a, b) {
     }
     return f;
 }
-module.exports = Produto;
+module.exports = produto;
 /**
  * Multiplica o primeiro numero com ele mesmo 'b' vezes, conhecido como potencia, ou efetivamente a ^ b
  * 
@@ -54,7 +54,7 @@ module.exports = Produto;
  * @throws {RangeError} Se uma das entradas não for inteiro
  * @throws {RangeError} Se a for menor que zero ou b for menor que zero
  */
-function Potencia(a, b) {
+function potencia(a, b) {
     if (a == null || a == undefined || b == null || b == undefined) {
         throw new Error("Entrada invalidada, null e undefined nao sao entradas validas");
     }
@@ -75,4 +75,4 @@ function Potencia(a, b) {
     }
     return c;
 }
-module.exports = Potencia;
+module.exports = potencia;

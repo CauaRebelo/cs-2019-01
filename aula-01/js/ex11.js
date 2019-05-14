@@ -15,7 +15,7 @@
  * @throws {RangeError} Se uma das entradas não for inteiro
  * @throws {RangeError} Se x for menor que 0 ou se y for menor que x ou se k for menor que 0
  */
-function RazaoAurea(x, y, k) {
+function razaoAurea(x, y, k) {
     if (x == null || x == undefined || y == null || y == undefined || k == null || k == undefined) {
         throw new Error("Entrada invalidada, null e undefined nao sao entradas validas");
     }
@@ -40,4 +40,4 @@ function RazaoAurea(x, y, k) {
     }
     return c/a;
 }
-module.exports = RazaoAurea;
+module.exports = razaoAurea;
