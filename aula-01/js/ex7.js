@@ -1,4 +1,17 @@
-module.exports = Produto;
+/**
+ * Multiplica dois numero, somando o primeiro numero com ele mesmo 'b' vezes, retornando o resultado da multiplicacao
+ * 
+ * @param {number} a O numero a ser somado b vezes
+ *
+ * @param {number} b A quantidade de vezes que a vai ser somado com ele mesmo
+ *
+ * @returns {number} Retorna o resultado da soma, ou seja o resultado do produto
+ * 
+ * @throws {Error} Se uma das entradas for nula ou nao definida
+ * @throws {TypeError} Se uma das entradas não for numero
+ * @throws {RangeError} Se uma das entradas não for inteiro
+ * @throws {RangeError} Se a for menor que zero ou b for menor que zero
+ */
 function Produto(a, b) {
     if (a == null || a == undefined || b == null || b == undefined) {
         throw new Error("Entrada invalidada, null e undefined nao sao entradas validas");
@@ -15,14 +28,15 @@ function Produto(a, b) {
     let c = a;
     let d = b;
     if (b < a) {
-        c = b;
-        d = a;
+    	c = b;
+    	d = a;
     }
     let e = 1;
     let f = 0;
     while (e <= c) {
-        f += d;
-        e++;
+    	f += d;
+    	e++;
     }
     return f;
 }
+module.exports = Produto;

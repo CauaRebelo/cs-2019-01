@@ -1,4 +1,15 @@
-module.exports = SomaNaturais;
+/**
+ * Calcula a soma dos primeiros naturais, N = {0, 1, 2 ...}
+ * 
+ * @param {number} numero A quantidade dos primeiros numeros naturais a serem somados 
+ * 
+ * @returns {number} Retorna o resultado da soma
+ *
+ * @throws {Error} Se a entrada for nula ou nao definida
+ * @throws {TypeError} Se a entrada não for numero
+ * @throws {RangeError} Se o numero não for inteiro
+ * @throws {RangeError} Se numero for menor que 1
+ */
 function SomaNaturais(numero) {
     if (numero == null || numero == undefined) {
         throw new Error("Entrada invalidada, null e undefined nao sao entradas validas");
@@ -15,8 +26,9 @@ function SomaNaturais(numero) {
     let a = 2;
     let b = 1;
     while (a <= numero) {
-        b += a;
-        a++;
+    	b += a;
+    	a++;
     }
     return b;
 }
+module.exports = SomaNaturais;
