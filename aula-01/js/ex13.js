@@ -27,8 +27,8 @@ function raiz(n , i) {
     }
     let r = 1;
     while (0 <= i) {
-    	r = (r + n/r) / 2;
-    	i -= 1;
+        r = (r + n/r) / 2;
+        i -= 1;
     }
     return r;
 }

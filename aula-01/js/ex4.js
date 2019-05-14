@@ -26,7 +26,7 @@ function mod(x, y) {
     }
     let s = x;
     while (y <= s) {
-    	s -= y;
+        s -= y;
     }
     return s;
 }
