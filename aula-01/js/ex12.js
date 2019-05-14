@@ -31,3 +31,4 @@ function QuadradoPerfeito(n) {
     }
     return s == n;
 }
+module.exports = QuadradoPerfeito;

@@ -38,3 +38,4 @@ function Pi(n) {
     }
     return p;
 }
+module.exports = Pi;

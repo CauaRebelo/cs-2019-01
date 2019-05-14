@@ -32,3 +32,4 @@ function Raiz(n , i) {
     }
     return r;
 }
+module.exports = Raiz;

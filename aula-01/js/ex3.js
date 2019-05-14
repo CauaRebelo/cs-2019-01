@@ -35,3 +35,4 @@ function diadasemana(dia, mes, ano) {
     const c = Math.trunc(dia + 2 * mes + 3 * (mes + 1) / 5 + ano + ano / 4 - ano / 100 + ano / 400);
     return c % 7;
  }
+ module.exports = diadasemana;

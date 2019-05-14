@@ -30,3 +30,4 @@ function propriedade153(numero) {
     const e = c % 10;
     return numero == (Math.pow(b, 3) + Math.pow(d, 3) + Math.pow(e, 3));
 }
+module.exports = propriedade153;

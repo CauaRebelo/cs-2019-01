@@ -40,3 +40,4 @@ function RazaoAurea(x, y, k) {
     }
     return c/a;
 }
+module.exports = RazaoAurea;

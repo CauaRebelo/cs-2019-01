@@ -39,3 +39,4 @@ function Produto(a, b) {
     }
     return f;
 }
+module.exports = Produto;

@@ -30,3 +30,4 @@ function propriedade3025(numero) {
     const c = numero % 100;
     return numero == Math.pow(b + c, 2);
 }
+module.exports = propriedade3025;

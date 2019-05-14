@@ -39,6 +39,7 @@ function Produto(a, b) {
     }
     return f;
 }
+module.exports = Produto;
 /**
  * Multiplica o primeiro numero com ele mesmo 'b' vezes, conhecido como potencia, ou efetivamente a ^ b
  * 
@@ -74,3 +75,4 @@ function Potencia(a, b) {
     }
     return c;
 }
+module.exports = Potencia;

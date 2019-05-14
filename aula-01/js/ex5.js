@@ -31,3 +31,4 @@ function SomaNaturais(numero) {
     }
     return b;
 }
+module.exports = SomaNaturais;

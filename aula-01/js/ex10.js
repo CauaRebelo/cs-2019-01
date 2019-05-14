@@ -37,3 +37,4 @@ function LogaritmoNatural(n, k) {
     }
     return e;
 }
+module.exports = LogaritmoNatural;
