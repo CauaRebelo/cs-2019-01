@@ -26,8 +26,8 @@ function fatorial(numero) {
     let a = 2;
     let b = 1;
     while (a <= numero) {
-    	b *= a;
-    	a++;
+        b *= a;
+        a++;
     }
     return b;
 }
