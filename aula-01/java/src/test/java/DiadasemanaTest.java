@@ -4,20 +4,19 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class Propriedade153Test {
+public class DiadasemanaTest {
 	
 	@Test
 	public void numeroForadaFaixaGeraExcecao() {
-		assertThrows(IllegalArgumentException.class, () -> Matematica.propriedade153(99));
+		assertThrows(IllegalArgumentException.class, () -> Matematica.diadasemana(22, 16 , 1999));
+		assertThrows(IllegalArgumentException.class, () -> Matematica.diadasemana(32, 05 , 2025));
+		assertThrows(IllegalArgumentException.class, () -> Matematica.diadasemana(15, 03 , 1658));
+		assertThrows(IllegalArgumentException.class, () -> Matematica.diadasemana(29, 02 , 2019));
 	}
 	
 	@Test
-	public void valorQueSatisfazPropriedade() {
-		assertTrue(Matematica.propriedade153(153));
+	public void dataTeste() {
+		assertEquals(3, Matematica.diadasemana(16, 05, 2019));
 	}
 	
-	@Test
-	public void valorQueNaoSatisfazPropriedade() {
-		assertFalse(Matematica.propriedade153(155));
-	}
 }

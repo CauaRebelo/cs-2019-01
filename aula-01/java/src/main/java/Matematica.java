@@ -1,3 +1,6 @@
+import java.time.LocalDate;
+import java.time.DateTimeException;
+
 public class Matematica {
 	public static boolean propriedade3025(int numero) {
 		if (numero <= 0 || numero > 9999) {
@@ -23,15 +26,15 @@ public class Matematica {
 		return numero == ( b * b * b + d * d * d + e * e * e);
 	}
 	
-	public static int diadasemana(int dia, int mes, int ano) {
-		dataInvalida(dia, mes, ano));
+	public static int diadasemana(final int dia, final int mes, final int ano) {
+		dataInvalida(dia, mes, ano);
 		
 		final int b = dia + 2 * mes + 3 * (mes + 1) / 5 + ano + ano / 4 - ano / 100 + ano / 400;
 		
-		return c % 7;
+		return b % 7;
 	}
 	
-	publlic static void dataInvalida(int dia, int mes, int ano) {
+	public static void dataInvalida(final int dia, final int mes, final int ano) {
 		if (dia < 1 || dia > 31) {
 			throw new IllegalArgumentException("Dia invalido");
 		}
@@ -44,7 +47,8 @@ public class Matematica {
 		try {
 			LocalDate.of(ano, mes, dia);
 		} catch (DateTimeException exp) {
-			throw new IllegalArgumentException("Data Invalida", exp);
+			final String data = String.format("%d/%d/%d", dia, mes, ano);
+			throw new IllegalArgumentException("Data Invalida" + data, exp);
 		}
 	}
 }
