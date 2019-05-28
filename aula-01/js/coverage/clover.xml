@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1559087088194" clover="3.2.0">
+  <project timestamp="1559087088194" name="All files">
+    <metrics statements="223" coveredstatements="223" conditionals="228" coveredconditionals="228" methods="14" coveredmethods="14" elements="465" coveredelements="465" complexity="0" loc="223" ncloc="223" packages="1" files="13" classes="13"/>
+    <file name="ex1.js" path="/home/aluno/Documentos/cs-2019-01/aula-01/js/ex1.js">
+      <metrics statements="12" coveredstatements="12" conditionals="12" coveredconditionals="12" methods="1" coveredmethods="1"/>
+      <line num="16" count="7" type="cond" truecount="4" falsecount="0"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="19" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="22" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="25" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="26" count="2" type="stmt"/>
+      <line num="29" count="2" type="stmt"/>
+      <line num="30" count="2" type="stmt"/>
+      <line num="31" count="2" type="stmt"/>
+      <line num="33" count="1" type="stmt"/>
+    </file>
+    <file name="ex10.js" path="/home/aluno/Documentos/cs-2019-01/aula-01/js/ex10.js">
+      <metrics statements="19" coveredstatements="19" conditionals="18" coveredconditionals="18" methods="1" coveredmethods="1"/>
+      <line num="16" count="5" type="cond" truecount="6" falsecount="0"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="19" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="22" count="3" type="cond" truecount="4" falsecount="0"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="25" count="2" type="cond" truecount="4" falsecount="0"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="33" count="2" type="stmt"/>
+      <line num="34" count="2" type="stmt"/>
+      <line num="35" count="2" type="stmt"/>
+      <line num="36" count="2" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
+      <line num="40" count="1" type="stmt"/>
+    </file>
+    <file name="ex11.js" path="/home/aluno/Documentos/cs-2019-01/aula-01/js/ex11.js">
+      <metrics statements="19" coveredstatements="19" conditionals="23" coveredconditionals="23" methods="1" coveredmethods="1"/>
+      <line num="19" count="5" type="cond" truecount="8" falsecount="0"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="22" count="4" type="cond" truecount="5" falsecount="0"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="25" count="3" type="cond" truecount="5" falsecount="0"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="28" count="2" type="cond" truecount="5" falsecount="0"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="33" count="1" type="stmt"/>
+      <line num="34" count="1" type="stmt"/>
+      <line num="35" count="1" type="stmt"/>
+      <line num="36" count="2" type="stmt"/>
+      <line num="37" count="2" type="stmt"/>
+      <line num="38" count="2" type="stmt"/>
+      <line num="39" count="2" type="stmt"/>
+      <line num="41" count="1" type="stmt"/>
+      <line num="43" count="1" type="stmt"/>
+    </file>
+    <file name="ex12.js" path="/home/aluno/Documentos/cs-2019-01/aula-01/js/ex12.js">
+      <metrics statements="15" coveredstatements="15" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
+      <line num="14" count="6" type="cond" truecount="4" falsecount="0"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="17" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="20" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="23" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="26" count="2" type="stmt"/>
+      <line num="27" count="2" type="stmt"/>
+      <line num="28" count="2" type="stmt"/>
+      <line num="29" count="3" type="stmt"/>
+      <line num="30" count="3" type="stmt"/>
+      <line num="32" count="2" type="stmt"/>
+      <line num="34" count="1" type="stmt"/>
+    </file>
+    <file name="ex13.js" path="/home/aluno/Documentos/cs-2019-01/aula-01/js/ex13.js">
+      <metrics statements="14" coveredstatements="14" conditionals="18" coveredconditionals="18" methods="1" coveredmethods="1"/>
+      <line num="16" count="5" type="cond" truecount="6" falsecount="0"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="19" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="22" count="3" type="cond" truecount="4" falsecount="0"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="25" count="2" type="cond" truecount="4" falsecount="0"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="30" count="1001" type="stmt"/>
+      <line num="31" count="1001" type="stmt"/>
+      <line num="33" count="1" type="stmt"/>
+      <line num="35" count="1" type="stmt"/>
+    </file>
+    <file name="ex2.js" path="/home/aluno/Documentos/cs-2019-01/aula-01/js/ex2.js">
+      <metrics statements="14" coveredstatements="14" conditionals="12" coveredconditionals="12" methods="1" coveredmethods="1"/>
+      <line num="15" count="7" type="cond" truecount="4" falsecount="0"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="18" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="21" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="24" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="25" count="2" type="stmt"/>
+      <line num="27" count="2" type="stmt"/>
+      <line num="28" count="2" type="stmt"/>
+      <line num="29" count="2" type="stmt"/>
+      <line num="30" count="2" type="stmt"/>
+      <line num="31" count="2" type="stmt"/>
+      <line num="33" count="1" type="stmt"/>
+    </file>
+    <file name="ex3.js" path="/home/aluno/Documentos/cs-2019-01/aula-01/js/ex3.js">
+      <metrics statements="14" coveredstatements="14" conditionals="29" coveredconditionals="29" methods="1" coveredmethods="1"/>
+      <line num="19" count="7" type="cond" truecount="8" falsecount="0"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="22" count="6" type="cond" truecount="5" falsecount="0"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="25" count="5" type="cond" truecount="5" falsecount="0"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="28" count="4" type="cond" truecount="7" falsecount="0"/>
+      <line num="29" count="2" type="stmt"/>
+      <line num="31" count="2" type="cond" truecount="4" falsecount="0"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="33" count="1" type="stmt"/>
+      <line num="35" count="2" type="stmt"/>
+      <line num="36" count="2" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
+    </file>
+    <file name="ex4.js" path="/home/aluno/Documentos/cs-2019-01/aula-01/js/ex4.js">
+      <metrics statements="13" coveredstatements="13" conditionals="18" coveredconditionals="18" methods="1" coveredmethods="1"/>
+      <line num="15" count="6" type="cond" truecount="6" falsecount="0"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="18" count="5" type="cond" truecount="4" falsecount="0"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="21" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="24" count="3" type="cond" truecount="4" falsecount="0"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="27" count="2" type="stmt"/>
+      <line num="28" count="2" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="31" count="2" type="stmt"/>
+      <line num="33" count="1" type="stmt"/>
+    </file>
+    <file name="ex5.js" path="/home/aluno/Documentos/cs-2019-01/aula-01/js/ex5.js">
+      <metrics statements="15" coveredstatements="15" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
+      <line num="14" count="5" type="cond" truecount="4" falsecount="0"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="17" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="20" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="29" count="2" type="stmt"/>
+      <line num="30" count="2" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="34" count="1" type="stmt"/>
+    </file>
+    <file name="ex6.js" path="/home/aluno/Documentos/cs-2019-01/aula-01/js/ex6.js">
+      <metrics statements="15" coveredstatements="15" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
+      <line num="14" count="5" type="cond" truecount="4" falsecount="0"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="17" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="20" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="29" count="4" type="stmt"/>
+      <line num="30" count="4" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="34" count="1" type="stmt"/>
+    </file>
+    <file name="ex7.js" path="/home/aluno/Documentos/cs-2019-01/aula-01/js/ex7.js">
+      <metrics statements="20" coveredstatements="20" conditionals="20" coveredconditionals="20" methods="1" coveredmethods="1"/>
+      <line num="16" count="6" type="cond" truecount="6" falsecount="0"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="19" count="5" type="cond" truecount="4" falsecount="0"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="22" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="25" count="3" type="cond" truecount="4" falsecount="0"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="28" count="2" type="stmt"/>
+      <line num="29" count="2" type="stmt"/>
+      <line num="30" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="34" count="2" type="stmt"/>
+      <line num="35" count="2" type="stmt"/>
+      <line num="36" count="2" type="stmt"/>
+      <line num="37" count="2" type="stmt"/>
+      <line num="38" count="2" type="stmt"/>
+      <line num="40" count="2" type="stmt"/>
+      <line num="42" count="1" type="stmt"/>
+    </file>
+    <file name="ex8.js" path="/home/aluno/Documentos/cs-2019-01/aula-01/js/ex8.js">
+      <metrics statements="34" coveredstatements="34" conditionals="38" coveredconditionals="38" methods="2" coveredmethods="2"/>
+      <line num="16" count="9" type="cond" truecount="6" falsecount="0"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="19" count="8" type="cond" truecount="4" falsecount="0"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="22" count="7" type="cond" truecount="4" falsecount="0"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="25" count="6" type="cond" truecount="4" falsecount="0"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="28" count="5" type="stmt"/>
+      <line num="29" count="5" type="stmt"/>
+      <line num="30" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="34" count="5" type="stmt"/>
+      <line num="35" count="5" type="stmt"/>
+      <line num="36" count="5" type="stmt"/>
+      <line num="37" count="5" type="stmt"/>
+      <line num="38" count="5" type="stmt"/>
+      <line num="40" count="5" type="stmt"/>
+      <line num="57" count="6" type="cond" truecount="6" falsecount="0"/>
+      <line num="58" count="1" type="stmt"/>
+      <line num="60" count="5" type="cond" truecount="4" falsecount="0"/>
+      <line num="61" count="1" type="stmt"/>
+      <line num="63" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="64" count="1" type="stmt"/>
+      <line num="66" count="3" type="cond" truecount="4" falsecount="0"/>
+      <line num="67" count="1" type="stmt"/>
+      <line num="69" count="2" type="stmt"/>
+      <line num="70" count="2" type="stmt"/>
+      <line num="71" count="2" type="stmt"/>
+      <line num="72" count="3" type="stmt"/>
+      <line num="73" count="3" type="stmt"/>
+      <line num="75" count="2" type="stmt"/>
+      <line num="77" count="1" type="stmt"/>
+    </file>
+    <file name="ex9.js" path="/home/aluno/Documentos/cs-2019-01/aula-01/js/ex9.js">
+      <metrics statements="19" coveredstatements="19" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
+      <line num="14" count="5" type="cond" truecount="4" falsecount="0"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="17" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="20" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="31" count="1000" type="stmt"/>
+      <line num="32" count="1000" type="stmt"/>
+      <line num="33" count="1000" type="stmt"/>
+      <line num="34" count="1000" type="stmt"/>
+      <line num="36" count="1" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

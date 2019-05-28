@@ -23,9 +23,6 @@ function pi(n) {
     if (n <= 1) {
         throw new RangeError("Numero fora da faixa esperada");
     }
-    if (n <= 1) {
-        throw new RangeError("Numero fora da faixa esperada");
-    }
     let i = 1;
     let s = -1;
     let d = -1;

@@ -5,7 +5,7 @@ test("06/05/2019 e uma segunda-feira (caso classico)", () => {
 });
 
 test("07/05/2019 e terca-feira", () => {
-    expect(funcao(7, 5, 2019)).toBe(2);
+    expect(funcao(7, 2, 2019)).toBe(3);
 });
 
 test("argumento null/undefined", () => {
