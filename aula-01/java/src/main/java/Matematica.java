@@ -79,11 +79,11 @@ public class Matematica {
      * @throws IllegalArgumentException Se o dividendo for menor ou igual a 0 ou se o divisor for menor que 0
      * @returns Retorna o modulo, ou seja, resto da divisao
     */
-    public static void mod(final int dividendo, final int divisor) {
+    public static int mod(final int dividendo, final int divisor) {
         if (divisor < 0 || dividendo <= 0) {
             throw new IllegalArgumentException("Numero fora da faixa esperada");
         }
-        int s = dividendo;
+        int resto = dividendo;
         while (divisor <= resto) {
             resto -= divisor;
         }
@@ -95,7 +95,7 @@ public class Matematica {
      * @throws IllegalArgumentException Se o numero for menor que 1
      * @returns Retorna o resultado da soma
     */
-    public static void somaNaturais(final int numero) {
+    public static int somaNaturais(final int numero) {
         if (numero < 1) {
             throw new IllegalArgumentException("Numero fora da faixa esperada");
         }
@@ -113,7 +113,7 @@ public class Matematica {
      * @throws IllegalArgumentException Se numero for menor que 1
      * @returns Retorna a Fatorial do numero, ou seja o resultado da multiplicacao
     */
-    public static void fatorial(final int numero) {
+    public static int fatorial(final int numero) {
         if (numero < 1) {
             throw new IllegalArgumentException("Numero fora da faixa esperada");
         }
@@ -132,15 +132,15 @@ public class Matematica {
      * @throws IllegalArgumentException Se a for menor que zero ou b for menor que zero
      * @returns Retorna o resultado da soma, ou seja o resultado do produto
     */
-    public static void produto(final int multiplicando, final int  multiplicador) {
+    public static int produto(final int multiplicando, final int  multiplicador) {
         if (multiplicando < 0 || multiplicador < 0) {
              throw new IllegalArgumentException("Numero fora da faixa esperada");
         }
         int c = multiplicando;
         int d = multiplicador;
-        if (b < a) {
-            c = b;
-            d = a;
+        if (multiplicador < multiplicando) {
+            c = multiplicador;
+            d = multiplicando;
         }
         int e = 1;
         int f = 0;
