@@ -150,4 +150,129 @@ public class Matematica {
         }
         return f;
     }
+    /**
+     * Multiplica o primeiro numero com ele mesmo 'b' vezes, conhecido como potencia, ou efetivamente a ^ b
+     * @param base O numero a ser multiplicado expoente vezes
+	 * @param expoente A quantidade de vezes que a vai ser multiplicado com ele mesmo
+     * @throws IllegalArgumentException Se a for menor que zero ou b for menor que zero
+     * @returns Retorna o resultado da multiplicacao, ou seja, sua potencia
+    */
+    public static int potencia(final int base, final int expoente) {
+        if (base < 0 || expoente < 0) {
+            throw new IllegalArgumentException("Numero fora da faixa esperada");
+        }
+        int c = 1;
+        int d = 1;
+        while (d <= expoente) {
+            c = produto(c, base);
+            d++;
+        }
+        return c;
+    }
+    /**
+     * Retorna o pi com numero precisao
+     * @param numero Precisao do resultado
+     * @throws IllegalArgumentException Se numero for menor ou igual a 1
+     * @returns Retorna pi com numero precisao
+    */
+    public static int pi(final int numero) {
+        if (numero <= 1) {
+            throw new IllegalArgumentException("Numero fora da faixa esperada");
+        }
+        int i = 1;
+        int s = -1;
+        int d = -1;
+        int p = 0;
+        while (i <= numero) {
+            d += 2;
+            s = -1 * s;
+            p += 4*s/d;
+            i += 1;
+        }
+        return p;
+    }
+    /**
+     * Retorna o logaritmo natural de n com k precisao
+     * @param numero Numero a ser usado no logaritmo natural
+	 * @param precisao Precisao do resultado
+     * @throws IllegalArgumentException Se numero for menor que 1 ou se precisao for menor que 2
+     * @returns Retorna o logaritmo natural limitado a precisao
+    */
+    public static int logaritmoNatural(final int numero, final int precisao) {
+        if (numero < 1 || precisao < 2) {
+            throw new IllegalArgumentException("Numero fora da faixa esperada");
+        }
+        int i = 2;
+        int e = 1 + numero;
+        int numerador = numero;
+        int denominador = 1;
+        while (i <= precisao) {
+            numerador *= numerador;
+            denominador *= i;
+            e += numerador/denominador;
+            i += 1;
+        }
+        return e;
+    }
+    /**
+     * Retorna a razao aurea de 2 numeros, ou seja, somar dois numeros, e logo em seguida somar os dois ultimos numeros dado pela razao, ate chegar nos ultimos
+     * definidos por k, numero dado pelo usuario, e faz a razao dos dois ultimos numeros
+     * @param num Primeiro numero a ser somado
+	 * @param num2 Segundo numero a ser somado
+     * @param quant A quantidade de vezes que serao somados
+     * @throws IllegalArgumentException Se x for menor que 0 ou se y for menor que x ou se k for menor que 0
+     * @returns Retorna o resultado da razao aurea, ou seja, o resultado de toda a soma
+    */
+    public static int razaoAurea(final int num, final int num2, final int quant) {
+        if (num < 0 || num2 < num || quant < 0) {
+            throw new IllegalArgumentException("Numero fora da faixa esperada");
+        }
+        int c = num2;
+        int a = num;
+        int i = 1;
+        int t = c;
+        while (i <= quant) {
+            t = c;
+            c += a;
+            a = t;
+            i += 1;
+        }
+        return c/a;
+    }
+    /**
+     * Descobre se o numero é um quadrado perfeito
+     * @param numero O numero que o usuario deseja saber se faz parte dos numeros que são quadrados perfeitos
+     * @throws IllegalArgumentException Se n for menor que 1
+     * @returns Define se o numero e quadrado perfeito ou nao
+    */
+    public static boolean quadradoPerfeito(final int numero) {
+        if (numero < 1) {
+            throw new IllegalArgumentException("Numero fora da faixa esperada");
+        }
+        int i = 1;
+        int s = 1;
+        while (s < numero) {
+            i += 2;
+            s += i;
+        }
+        return s == numero;
+    }
+    /**
+     * Calcula a raiz quadrada de um numero com uma certa precisao, sendo os dois dados pelo usuario
+     * @param numero O numero que sera aplicada a raiz quadrada
+	 * @param precisao Precisao da operacao
+     * @throws IllegalArgumentException Se n ou i forem menor que 0
+     * @returns Retorna a raiz quadrada de n
+    */
+    public static int raiz(final int numero , final int precisao) {
+        if (numero < 0 || precisao < 0) {
+            throw new IllegalArgumentException("Numero fora da faixa esperada");
+        }
+        int r = 1;
+        while (0 <= numero) {
+            r = (r + numero/r) / 2;
+            precisao -= 1;
+        }
+        return r;
+}
 }
