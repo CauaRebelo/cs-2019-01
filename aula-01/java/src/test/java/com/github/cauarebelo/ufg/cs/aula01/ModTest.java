@@ -14,7 +14,7 @@ public class ModTest {
 		assertThrows(IllegalArgumentException.class, () -> Matematica.mod(1, 0));
 		assertThrows(IllegalArgumentException.class, () -> Matematica.mod(1, -1));
     }
-    
+	
     @Test
     public void valorQueSatisfazPropriedade() {
         assertEquals(3, Matematica.mod(7, 4));

@@ -106,7 +106,7 @@ public class Matematica {
      * @return Retorna o modulo, ou seja, resto da divisao
     */
     public static int mod(final int dividendo, final int divisor) {
-        if (divisor < 0 || dividendo <= 0) {
+        if (dividendo < 0 || divisor <= 0) {
             throw new IllegalArgumentException("Numero fora da faixa esperada");
         }
         int resto = dividendo;
