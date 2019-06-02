@@ -1,3 +1,5 @@
+package com.github.cauarebelo.ufg.cs.aula01;
+
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
