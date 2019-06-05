@@ -25,9 +25,9 @@ public class Matematica {
             throw new IllegalArgumentException("Numero fora da faixa esperada");
         }
         final int auxiliar1 = 100;
-        final int b = numero / auxiliar1;
-        final int c = numero % auxiliar1;
-        return numero == (b + c) * (b + c);
+        final int div = numero / auxiliar1;
+        final int mult = numero % auxiliar1;
+        return numero == (div + mult) * (div + mult);
     }
     /**
      * Aplica a propriedade 153 ao numero desejado, ou seja, a soma do cubo de
@@ -45,11 +45,11 @@ public class Matematica {
         }
         final int auxiliar1 = 100;
         final int auxiliar2 = 10;
-        final int b = numero / auxiliar1;
-        final int c = numero % auxiliar1;
-        final int d = c / auxiliar2;
-        final int e = c % auxiliar2;
-        return numero == (b * b * b + d * d * d + e * e * e);
+        final int div = numero / auxiliar1;
+        final int ajuda = numero % auxiliar1;
+        final int quo = ajuda / auxiliar2;
+        final int res = ajuda % auxiliar2;
+        return numero == (div * div * div + quo * quo * quo + res * res * res);
     }
     /**
      * Informa o dia da semana, sendo 0 segunda e assim por diante.
