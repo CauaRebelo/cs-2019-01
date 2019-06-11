@@ -1,7 +1,6 @@
 language: java
-cd
 script:
-  - cd aula-01/java mvn clean javadoc:javadoc verify -P cobertura checkstyle:checkstyle pmd:pmd spotbugs:spotbugs verify -P owasp spotbugs:spotbugs -P security
+  - cd aula-01/java && mvn clean javadoc:javadoc verify -P cobertura checkstyle:checkstyle pmd:pmd spotbugs:spotbugs verify -P owasp spotbugs:spotbugs -P security
 cache:
   directories:
   - "$HOME/.m2/repository"
