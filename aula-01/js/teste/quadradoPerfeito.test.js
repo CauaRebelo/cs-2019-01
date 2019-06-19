@@ -1,4 +1,4 @@
-const funcao = require("../ex12");
+const funcao = require("../quadradoPerfeito");
 
 test("quadradoPerfeito 4 satisfaz (caso classico)", () => {
     expect(funcao(4)).toBe(true);

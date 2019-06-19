@@ -1,4 +1,4 @@
-const funcao = require("../ex13");
+const funcao = require("../raiz");
 
 test("Raiz Quadrada de 2 (caso classico)", () => {
     expect(funcao(2, 1000)).toBe(1.414213562373095);

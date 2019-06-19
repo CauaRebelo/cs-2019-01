@@ -1,4 +1,4 @@
-const funcao = require("../ex8");
+const funcao = require("../potencia");
 
 test("Produto de 1 e 2 = 2 (caso classico)", () => {
     expect(funcao.produto(1, 2)).toBe(2);

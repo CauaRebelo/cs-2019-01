@@ -1,4 +1,4 @@
-const funcao = require("../ex11");
+const funcao = require("../razaoAurea");
 
 test("Razao Aurea de 2 e 2 e 2 = 1.5 (caso classico)", () => {
     expect(funcao(2, 2, 2)).toBe(1.5);

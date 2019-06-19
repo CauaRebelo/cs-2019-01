@@ -4,59 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.kyriosdata</groupId>
+    <groupId>com.github.cauarebelo.ufg.cs.aula01</groupId>
     <artifactId>exemplo</artifactId>
     <packaging>jar</packaging>
     <version>1.0.1</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
-
-    <description>
-        Projeto de referência para desenvolvimento em Java.
-        A expectativa é que o presente projeto possa ser empregado como ponto
-        de partida e, a partir dele, ajustes realizados para se adequar às
-        necessidades específicas do projeto em questão.
-    </description>
-
-    <url>https://github.com/kyriosdata/exemplo</url>
-
-    <organization>
-        <name>Instituto de Informática (UFG) - Fábrica de Software</name>
-        <url>http://www.inf.ufg.br</url>
-    </organization>
-
-    <inceptionYear>2016</inceptionYear>
-
-    <licenses>
-        <license>
-            <name>Creative Commons Attribution 4.0 International (CC BY 4.0)
-            </name>
-            <comments>A atribuição deve conter, explicitamente, a seguinte
-                linha:
-                Copyright (c) 2016. Fábrica de Software - Instituto de
-                Informática (UFG)
-            </comments>
-            <url>https://creativecommons.org/licenses/by/4.0/</url>
-        </license>
-    </licenses>
-
-    <developers>
-        <developer>
-            <id>kyriosdata</id>
-            <name>Fábio Nogueira de Lucena</name>
-            <email>fabio@inf.ufg.br</email>
-            <organization>Instituto de Informática (UFG)</organization>
-            <organizationUrl>http://www.inf.ufg.br</organizationUrl>
-        </developer>
-    </developers>
-
-    <scm>
-        <connection>scm:git:https://github.com/kyriosdata/exemplo.git
-        </connection>
-        <developerConnection>scm:git:https://github.com/kyriosdata/exemplo.git
-        </developerConnection>
-        <url>https://github.com/kyriosdata/exemplo</url>
-    </scm>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -70,7 +23,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.mainClass>
-            com.github.kyriosdata.exemplo.application.console.ProgramaCalendario
+            com.github.cauarebelo.ufg.cs.aula01.Matematica
         </project.mainClass>
     </properties>
 
@@ -117,7 +70,7 @@
     <build>
 
         <!-- Define o nome do arquivo a ser gerado (.jar é acrescentada) -->
-        <finalName>exemplo</finalName>
+        <finalName>exercicio_cauarebelo</finalName>
 
         <plugins>            
 
@@ -291,6 +244,7 @@
                         <ruleset>/category/java/performance.xml</ruleset>
                         <ruleset>/category/java/security.xml</ruleset>
                     </rulesets>
+
                 </configuration>
             </plugin>
 
@@ -406,6 +360,7 @@
                         <ruleset>/category/java/performance.xml</ruleset>
                         <ruleset>/category/java/security.xml</ruleset>
                     </rulesets>
+                    
                 </configuration>
             </plugin>
 
@@ -496,11 +451,11 @@
                         <configuration>
                             <targetClasses>
                                 <param>
-                                    com.github.kyriosdata.exemplo.domain.Calendario
+                                    com.github.cauarebelo.ufg.cs.aula01.Matematica
                                 </param>
                             </targetClasses>
                             <targetTests>
-                                <param>com.github.kyriosdata.exemplo.*</param>
+                                <param>com.github.cauarebelo.ufg.cs.aula01.*</param>
                             </targetTests>
                         </configuration>
                     </plugin>

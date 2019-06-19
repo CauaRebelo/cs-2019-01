@@ -1,4 +1,4 @@
-const funcao = require("../ex10");
+const funcao = require("../logaritmoNatural");
 
 test("Logaritmo Natural de 3 e 3 (caso classico)", () => {
     expect(funcao(3, 3)).toBe(22);

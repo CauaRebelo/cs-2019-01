@@ -1,4 +1,4 @@
-const funcao = require("../ex5");
+const funcao = require("../somaNaturais");
 
 test("Soma Natural de 3 = 6 (caso classico)", () => {
     expect(funcao(3)).toBe(6);

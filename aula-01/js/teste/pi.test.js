@@ -1,4 +1,4 @@
-const funcao = require("../ex9");
+const funcao = require("../pi");
 
 test("Pi (caso classico)", () => {
     expect(funcao(1000)).toBe(3.140592653839794);

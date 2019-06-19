@@ -1,4 +1,4 @@
-const funcao = require("../ex4");
+const funcao = require("../mod");
 
 test("Modulo de 3 com 2 = 1 (caso classico)", () => {
     expect(funcao(3, 2)).toBe(1);

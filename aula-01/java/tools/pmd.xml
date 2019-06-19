@@ -18,6 +18,10 @@
         </properties>
     </rule>
     <rule ref="category/java/documentation.xml/UncommentedEmptyConstructor" />
+        <properties>
+             <property name="ignoreExplicitConstructorInvocation" value="true" />
+        </properties>
+    </rule>
 
     <!--<rule ref="category/java/codestyle.xml/AtLeastOneConstructor" />-->
 
@@ -135,7 +139,7 @@
     <rule ref="category/java/design.xml/TooManyFields" />
     <rule ref="category/java/design.xml/TooManyMethods">
         <properties>
-            <property name="maxmethods" value="25"/>
+            <property name="maxmethods" value="30"/>
         </properties>
     </rule>
     <rule ref="category/java/design.xml/UselessOverridingMethod" />

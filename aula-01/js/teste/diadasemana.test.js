@@ -1,4 +1,4 @@
-const funcao = require("../ex3");
+const funcao = require("../diadasemana");
 
 test("06/05/2019 e uma segunda-feira (caso classico)", () => {
     expect(funcao(6, 5, 2019)).toBe(1);
