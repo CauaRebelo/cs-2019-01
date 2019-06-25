@@ -10,16 +10,16 @@ public class Propriedade153Test {
     
     @Test
     public void numeroForadaFaixaGeraExcecao() {
-        assertThrows(IllegalArgumentException.class, () -> MatematicaUtil.propriedade153(99));
+        assertThrows(IllegalArgumentException.class, () -> MatematicaUtils.propriedade153(99));
     }
     
     @Test
     public void valorQueSatisfazPropriedade() {
-        assertTrue(MatematicaUtil.propriedade153(153));
+        assertTrue(MatematicaUtils.propriedade153(153));
     }
     
     @Test
     public void valorQueNaoSatisfazPropriedade() {
-        assertFalse(MatematicaUtil.propriedade153(155));
+        assertFalse(MatematicaUtils.propriedade153(155));
     }
 }

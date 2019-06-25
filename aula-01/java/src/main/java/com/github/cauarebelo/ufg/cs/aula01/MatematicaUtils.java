@@ -1,18 +1,21 @@
 package com.github.cauarebelo.ufg.cs.aula01;
+
 import java.time.LocalDate;
 import java.time.DateTimeException;
+
 /**
- * Algoritmos uteis de Matematica
+ * Algoritmos uteis de Matematica.
 */
 @SuppressWarnings({"PMD.DataflowAnomalyAnalysis", "PMD.AvoidLiteralsInIfCondition"})
-public final class MatematicaUtil {
+public final class MatematicaUtils {
 
     /**
      * Para checkstyle.
      */
-    private MatematicaUtil() {
+    private MatematicaUtils() {
     // Esse construtor esta vazio de proposito
     }
+
     /**
      * Verifica se numéro satisfaz propriedade 3025.
      * @param numero variavel a ser verificada
@@ -135,7 +138,7 @@ public final class MatematicaUtil {
      * @return Retorna o resultado da soma
     */
     public static int somaNaturais(final int numero) {
-		final int somaMaxima = 1;
+        final int somaMaxima = 1;
         if (numero < somaMaxima) {
             throw new IllegalArgumentException("Numero deve ser maior que 0");
         }
@@ -156,7 +159,7 @@ public final class MatematicaUtil {
      * @return Retorna o Fatorial do numéro
     */
     public static int fatorial(final int numero) {
-		final int numeroMaximo = 1;
+        final int numeroMaximo = 1;
         if (numero < numeroMaximo) {
             throw new IllegalArgumentException("Numero deve ser maior que 0");
         }
@@ -395,7 +398,7 @@ public final class MatematicaUtil {
     }
 
     /**
-     * Verificar se um Array é null
+     * Verificar se um Array é null.
      * @param array Vetor
      */
     public static void arrayNull(final int[] array) {
@@ -405,7 +408,7 @@ public final class MatematicaUtil {
     }
 
     /**
-     * Verifica se um array tem o tamanho errado
+     * Verifica se um array tem o tamanho errado.
      * @param array Vetor
      */
     public static void arrayTamanho(final int[] array) {
@@ -427,7 +430,7 @@ public final class MatematicaUtil {
 
         if (numero1 < numero2) {
             throw new IllegalArgumentException("O primeiro numero deve"
-			+ "ser menor que o segundo");
+                              + "ser menor que o segundo");
         }
 
         if (numero2 < 0) {
@@ -458,7 +461,7 @@ public final class MatematicaUtil {
 
         if (numero1 < numero2) {
             throw new IllegalArgumentException("O primeiro numero deve"
-			+ "ser menor que o segundo");
+                              + "ser menor que o segundo");
         }
 
         if (numero2 < 0) {
@@ -469,7 +472,7 @@ public final class MatematicaUtil {
         int auxiliar2 = numero2;
         while (auxiliar1 != auxiliar2) {
             if (auxiliar1 > auxiliar2) {
-                auxiliar1 = auxilir1 - auxiliar2;
+                auxiliar1 = auxiliar1 - auxiliar2;
             } else {
                 auxiliar2 = auxiliar2 - auxiliar1;
             }
@@ -536,7 +539,7 @@ public final class MatematicaUtil {
     }
 
     /**
-     * Transforma cpf em string
+     * Transforma cpf em string.
      * @param d cpf como string
      * @return cpf como vetor
      */
@@ -572,10 +575,10 @@ public final class MatematicaUtil {
         final int nonoDigito = 9;
         final int decimoDigito = 10;
 
-        final int j =  d[0] + 2 * d[1] + terceiroDigito * d[2] + quartoDigito 
-		            * d[terceiroDigito] + quintoDigito * d[quartoDigito] + sextoDigito * d[quintoDigito]
-					+ setimoDigito * d[sextoDigito] + oitavoDigito * d[setimoDigito] + nonoDigito
-					* d[oitavoDigito];
+        final int j = d[0] + 2 * d[1] + terceiroDigito * d[2] + quartoDigito
+                            * d[terceiroDigito] + quintoDigito * d[quartoDigito] + sextoDigito * d[quintoDigito]
+                            + setimoDigito * d[sextoDigito] + oitavoDigito * d[setimoDigito] + nonoDigito
+                            * d[oitavoDigito];
 
         final int k = d[1] + 2 * d[2] + terceiroDigito * d[terceiroDigito] + quartoDigito
                     * d[quartoDigito] + quintoDigito * d[quintoDigito] + sextoDigito
@@ -624,3 +627,4 @@ public final class MatematicaUtil {
         return j == d[nonoDigito] && k == d[decimoDigito];
     }
 }
+

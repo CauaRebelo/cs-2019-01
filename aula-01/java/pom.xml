@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     
-    <groupId>com.github.cauarebelo.ufg.cs.aula01</groupId>
-    <artifactId>java</artifactId>
+    <groupId>com.github.cauarebelo</groupId>
+    <artifactId>aula-01</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
@@ -18,7 +18,7 @@
     </parent>
 
     <properties>
-        <java.version>10</java.version>
+        <java.version>8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
