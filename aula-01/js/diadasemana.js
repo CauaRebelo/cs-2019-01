@@ -16,6 +16,7 @@
  * ou se o ano for menor que 1753
  */
 function diadasemana(dia, mes, ano) {
+    // FIXME condições assim merecem função própria, pode até ser local. Crie a função correspondente.
     if (dia == null || dia == undefined || mes == null || mes == undefined || ano == null || ano == undefined) {
         throw new Error("Entrada invalidada, null e undefined nao sao entradas validas");
     }
