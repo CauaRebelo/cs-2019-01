@@ -271,6 +271,8 @@ public final class MatematicaUtil {
     }
 
     /**
+     * FIXME Apenas para reiterar: acentuar corretamente as palavras.
+     *
      * Retorna a razao aurea de 2 numéros, ou seja, somar dois numéros,
      * e logo em seguida somar os dois ultimos numéros dado pela razao,
      * ate chegar nos ultimos definidos por k, numéro dado pelo usuario,
