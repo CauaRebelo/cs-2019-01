@@ -7,4 +7,3 @@ cache:
   - "$HOME/.sonar/cache"
 jdk:
   - oraclejdk11
-  
