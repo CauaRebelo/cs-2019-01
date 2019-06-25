@@ -503,7 +503,7 @@
                                 </param>
                             </targetClasses>
                             <targetTests>
-                                <param>com.github.cauarebelo.cs.aula1.*</param>
+                                <param>com.github.cauarebelo.cs.aula01.*</param>
                             </targetTests>
                         </configuration>
                     </plugin>
