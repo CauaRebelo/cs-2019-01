@@ -6,6 +6,7 @@ import java.time.DateTimeException;
 */
 @SuppressWarnings({"PMD.DataflowAnomalyAnalysis", "PMD.AvoidLiteralsInIfCondition"})
 public final class MatematicaUtil {
+
     /**
      * Para checkstyle.
      */
@@ -30,6 +31,7 @@ public final class MatematicaUtil {
         final int mult = numero % auxiliar1;
         return numero == (div + mult) * (div + mult);
     }
+
     /**
      * Aplica a propriedade 153 ao numéro desejado, ou seja, a soma do cubo de
      * cade um de seus digitos e igual ao propio numéro, um exemplo seria
@@ -52,6 +54,7 @@ public final class MatematicaUtil {
         final int res = ajuda % auxiliar2;
         return numero == div * div * div + quo * quo * quo + res * res * res;
     }
+
     /**
      * Informa o dia da semana, sendo 0 segunda e assim por diante.
      * @param dia Dia desejado
@@ -73,6 +76,7 @@ public final class MatematicaUtil {
         final int semana = 7;
         return diasem % semana;
     }
+
     /**
      * Informa se a data e inválida.
      * @param dia Dia desejado
@@ -103,6 +107,7 @@ public final class MatematicaUtil {
             throw new IllegalArgumentException("Data inválida" + data, exp);
         }
     }
+
     /**
      * Encontra o módulo, ou seja resto da divisão, de um tal numéro
      * com seu divisor.
@@ -122,6 +127,7 @@ public final class MatematicaUtil {
         }
         return resto;
     }
+
     /**
      * Calcula a soma dos primeiros naturais, N = {0, 1, 2 ...}.
      * @param numero A quantidade dos primeiros numéros naturais somados
@@ -141,6 +147,7 @@ public final class MatematicaUtil {
         }
         return b;
     }
+
     /**
      * Multiplicar a quantidade de numéro naturais em ordem baseado no
      * numéro dado pelo usuário.
@@ -161,6 +168,7 @@ public final class MatematicaUtil {
         }
         return b;
     }
+
     /**
      * Multiplica dois numéro, somando o primeiro numéro com ele mêsmo
      * baseado no multiplicador, retornando o resultado da multiplicacao.
@@ -189,6 +197,7 @@ public final class MatematicaUtil {
         }
         return f;
     }
+
     /**
      * Multiplica o primeiro numéro com ele mêsmo baseado no expoente,
      * conhecido como potencia, ou efetivamente base ^ expoente.
@@ -211,6 +220,7 @@ public final class MatematicaUtil {
         }
         return c;
     }
+
     /**
      * Retorna o pi com uma precisao baseada no numéro.
      * @param numero Precisao do resultado
@@ -234,6 +244,7 @@ public final class MatematicaUtil {
         }
         return p;
     }
+
     /**
      * Retorna o logaritmo natural de numéro com certa precisao.
      * @param numero numéro a ser usado no logaritmo natural
@@ -258,6 +269,7 @@ public final class MatematicaUtil {
         }
         return e;
     }
+
     /**
      * Retorna a razao aurea de 2 numéros, ou seja, somar dois numéros,
      * e logo em seguida somar os dois ultimos numéros dado pela razao,
@@ -286,6 +298,7 @@ public final class MatematicaUtil {
         }
         return c / a;
     }
+
     /**
      * Descobre se o numéro é um quadrado perfeito.
      * @param numero O numéro que o usuario deseja saber se faz parte dos
@@ -305,6 +318,7 @@ public final class MatematicaUtil {
         }
         return s == numero;
     }
+
     /**
      * Calcula a raiz quadrada de um numéro com uma certa precisao,
      * sendo os dois dados pelo usuario.
