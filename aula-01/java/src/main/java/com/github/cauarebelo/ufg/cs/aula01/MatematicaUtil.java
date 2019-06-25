@@ -4,6 +4,10 @@ import java.time.DateTimeException;
 /**
  * Algoritmos uteis de Matematica
 */
+// FIXME embora classes distintas possam ser configuradas distintamente, o mais recomendado
+// é configurar por projeto, conforme o documento xml específico para tal no diretório "tools"
+// A linha abaixo deve ser removida. Cada anotação do PMD será verificada (se falso positivo, ok, caso 
+// contrário, deve ser corrigido. 
 @SuppressWarnings({"PMD.DataflowAnomalyAnalysis", "PMD.AvoidLiteralsInIfCondition"})
 public final class MatematicaUtil {
 
