@@ -552,17 +552,23 @@ public final class MatematicaUtil {
     /**
      * Algoritmo que certifica se o CPF é válido.
      * @param cpf CPF a ser verificado
+     * FIXME a documentação das exceções deve vir após a documentação do return
      * @throws IllegalArgumentException caso entrada tenha
      * mais ou menos que 11 dígitos
      * @return caso CPF seja verdadeiro retorna true
      */
     public static boolean cpf(final String cpf) {
+	// FIXME não seria melhor tamanhoCpf em vez de aux11?
         final int aux11 = 11;
+	// FIXME não seria melhor cpf.length() != aux11 em vez da condição abaixo?
         if (cpf.length() > aux11 || cpf.length() < aux11) {
             throw new IllegalArgumentException("O CPF deve conter 11 dígitos");
         }
 
         final int[] d = cpfStringToArray(cpf);
+	
+	// FIXME observe que os nomes são enganosos, pois estes são os índices
+	// e não os dígitos propriamente ditos!!!!
         final int terceiroDigito = 3;
         final int quartoDigito = 4;
         final int quintoDigito = 5;
