@@ -29,7 +29,7 @@ function fibonacci(n) {
     } else {
         let i = 2;
         let t;
-        while (i <= n) {
+        while (n >= i) {
             t = c;
             c = c + a;
             a = t;

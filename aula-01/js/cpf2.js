@@ -29,7 +29,7 @@ function cpf2(d) {
     let p = d[8];
     let s = d[8];
 
-    while (0 <= c) {
+    while (c >= 0) {
         p = p + d[c];
         s = s + p;
         c = c - 1;

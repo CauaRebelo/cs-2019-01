@@ -36,7 +36,7 @@ function CrivoErastotenes(a, n) {
     let i = 2;
     let limite = Math.floor(Math.sqrt(n));
     let multiplo;
-    while (i <= limite) {
+    while (limite >= i) {
         if (s[i] == 0) {
             multiplo = i + i;
             while (multiplo <= n) {

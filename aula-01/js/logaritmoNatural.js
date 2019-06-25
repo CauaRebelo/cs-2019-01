@@ -29,11 +29,11 @@ function logaritmoNatural(n, k) {
     let e = 1 + n;
     let numerador = n;
     let denominador = 1;
-    while (i <= k) {
-        numerador *= numerador;
-        denominador *= i;
-        e += numerador/denominador;
-        i += 1;
+    while (k >= i) {
+        numerador = numerador * numerador;
+        denominador = denominador * i;
+        e = e + numerador/denominador;
+        i = i + 1;
     }
     return e;
 }

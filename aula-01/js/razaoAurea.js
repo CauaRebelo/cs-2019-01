@@ -32,11 +32,11 @@ function razaoAurea(x, y, k) {
     let a = x;
     let i = 1;
     let t = c;
-    while (i <= k) {
+    while (k >= i) {
         t = c;
-        c += a;
+        c = c + a;
         a = t;
-        i += 1;
+        i = i + 1;
     }
     return c/a;
 }

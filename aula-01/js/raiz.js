@@ -26,9 +26,9 @@ function raiz(n , i) {
         throw new RangeError("Numero fora da faixa esperada");
     }
     let r = 1;
-    while (0 <= i) {
+    while (i >= 0) {
         r = (r + n/r) / 2;
-        i -= 1;
+        i = i - 1;
     }
     return r;
 }

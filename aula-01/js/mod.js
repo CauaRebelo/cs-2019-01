@@ -25,8 +25,8 @@ function mod(x, y) {
         throw new RangeError("Numero fora da faixa esperada");
     }
     let s = x;
-    while (y <= s) {
-        s -= y;
+    while (s >= y) {
+        s = s - y;
     }
     return s;
 }

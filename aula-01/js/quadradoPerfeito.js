@@ -25,9 +25,9 @@ function quadradoPerfeito(n) {
     }
     let i = 1;
     let s = 1;
-    while (s < n) {
-        i += 2;
-        s += i;
+    while (n > s) {
+        i = i + 2;
+        s = s + i;
     }
     return s == n;
 }

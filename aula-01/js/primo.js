@@ -22,7 +22,7 @@ function primo(n) {
         throw new RangeError("valor fora  da faixa: " + n);
     }
     let i = 2;
-    while (i < n) {
+    while (n > i) {
         if ((n % i) == 0) {
             return false;
         }

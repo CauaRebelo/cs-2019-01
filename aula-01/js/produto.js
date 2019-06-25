@@ -33,8 +33,8 @@ function produto(a, b) {
     }
     let e = 1;
     let f = 0;
-    while (e <= c) {
-        f += d;
+    while (c >= e) {
+        f = f + d;
         e++;
     }
     return f;

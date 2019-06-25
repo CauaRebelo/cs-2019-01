@@ -27,11 +27,11 @@ function pi(n) {
     let s = -1;
     let d = -1;
     let p = 0;
-    while (i <= n) {
-        d += 2;
+    while (n >= i) {
+        d = d + 2;
         s = -1 * s;
-        p += 4*s/d;
-        i += 1;
+        p = p + 4*s/d;
+        i = i + 1;
     }
     return p;
 }
