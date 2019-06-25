@@ -78,28 +78,49 @@ public final class MatematicaUtil {
     }
 
     /**
+     * FIXME a semântica do texto é importante. Este "informa"? Ou "verifica"?
+     * FIXME "se a data" refere-se a qual data? Não seria melhor "se a data fornecida"?
      * Informa se a data e inválida.
-     * @param dia Dia desejado
+     *
+     * FIXME O que é um "Dia desejado"? Não seria simplesmente "o dia" ou "o dia da data"?
+     * @param dia Dia desejado.
+     *
      * @param mes O mês desejado
      * @param ano O ano desejado
+     *
+     * FIXME Observe os acentos...
      * @throws IllegalArgumentException Se o dia nao for valido
      * @throws IllegalArgumentException Se o mês nao for valido
      * @throws IllegalArgumentException Se o ano nao for valido
+     *
+     * FIXME O que isso significa para o programador cliente deste método? 
+     * FIXME Não seria melhor "se a data fornecida for inválida"?
      * @throws IllegalArgumentException Se houver uma DataTimeException
+     *
+     * FIXME Sugiro fortemente consultar a documentação em https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html#of-int-int-int-
+     * acerca de exemplo muito similar ao que se pretende com este método. Veja como está
+     * documentada a exceção.
     */
+    // FIXME um melhor nome não seria verificaSeDataInvalida, em vez de dataInval?
     public static void dataInval(final int dia, final int mes, final int ano) {
         final int diaMax = 31;
         if (dia < 1 || dia > diaMax) {
+	    // FIXME acentue suas mensagens (estão em português)
             throw new IllegalArgumentException("Dia invalido");
         }
+	    
+	// FIXME (linha em branco) Isole blocos de código à semelhança de parágrafos em um texto. 
         final int mesMax = 12;
         if (mes < 1 || mes > mesMax) {
             throw new IllegalArgumentException("mês invalido");
         }
+	    
         final int anoMinimo = 1753;
         if (anoMinimo >= ano) {
             throw new IllegalArgumentException("Ano invalido");
         }
+	    
+	// FIXME separação dos blocos
         try {
             LocalDate.of(ano, mes, dia);
         } catch (DateTimeException exp) {
