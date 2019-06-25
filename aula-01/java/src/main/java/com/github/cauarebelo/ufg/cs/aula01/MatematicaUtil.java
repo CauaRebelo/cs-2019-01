@@ -339,4 +339,288 @@ public final class MatematicaUtil {
         }
         return r;
     }
+
+    /**
+     * Calcula se um numéro é primo.
+     * @param numero número a ser calculado
+     * @throws IllegalArgumentException caso entrada seja menor que 1
+     * @return true caso entrada seja um número primo
+     */
+    public static boolean primo(final int numero) {
+        final int numMin = 1;
+        if (numero < numMin) {
+            throw new IllegalArgumentException(
+                "Intervalo de número inválido");
+        }
+
+        int aux = 2;
+
+        while (numero > aux) {
+            if (numero % aux == 0) {
+                return false;
+            }
+            aux += 1;
+        }
+
+        return true;
+    }
+
+    /**
+     * Algoritmo que encontra números primos.
+     * @param array vetor de zeros com o tamanho do número a ser checado
+     * @throws IllegalArgumentException caso o tamanho do vetor for
+     * menor ou igual a 1 ou vetor não estiver zerado
+     * @return vetor com resultado calculado
+     */
+    public static int[] crivoEratostenes(final int[] array) {
+        arrayNull(array);
+        arrayTamanho(array);
+
+        int contador = 2;
+        final int limite = (int) Math.floor(Math.sqrt(array.length));
+
+        while (contador <= limite) {
+
+            int multiplo = contador + contador;
+
+                while (multiplo <= array.length) {
+                    array[multiplo] = 1;
+                    multiplo += contador;
+                }
+
+            contador += 1;
+        }
+
+        return array;
+    }
+
+    /**
+     * Verificar se um Array é null
+     * @param array Vetor
+     */
+    public static void arrayNull(final int[] array) {
+        if (array == null) {
+            throw new IllegalArgumentException("array is null");
+        }
+    }
+
+    /**
+     * Verifica se um array tem o tamanho errado
+     * @param array Vetor
+     */
+    public static void arrayTamanho(final int[] array) {
+        final int arrayTamMin = 1;
+        if (array.length < arrayTamMin) {
+            throw new IllegalArgumentException("Tamanho do array inválido");
+        }
+    }
+
+    /**
+     * Calcula o maior divisor comum entre a e b.
+     * @param numero1 número inteiro que será utilizado para o mdc
+     * @param numero2 número inteiro que será utilizado para o mdc
+     * @throws IllegalArgumentException caso b seja maior que a,
+     * ou b menor que 0
+     * @return o valor do mdc entre a e b
+     */
+    public static int mdc(final int numero1, final int numero2) {
+
+        if (numero1 < numero2) {
+            throw new IllegalArgumentException("O primeiro numero deve"
+			+ "ser menor que o segundo");
+        }
+
+        if (numero2 < 0) {
+            throw new IllegalArgumentException("Numero 2 invalido");
+        }
+
+        int auxiliar1 = numero1;
+        int auxiliar2 = numero2;
+
+        while (auxiliar2 != 0) {
+            final int temporario = auxiliar1 % auxiliar2;
+            auxiliar1 = auxiliar2;
+            auxiliar2 = temporario;
+        }
+
+        return auxiliar1;
+    }
+
+    /**
+     * Calcula outra forma de achar o maior divisor comum entre a e b.
+     * @param numero1 número inteiro que será utilizado para o mdc
+     * @param numero2 número inteiro que será utilizado para o mdc
+     * @throws IllegalArgumentException caso b seja maior que a,
+     * ou b menor que 0
+     * @return o valor do mdc
+     */
+    public static int mdc2(final int numero1, final int numero2) {
+
+        if (numero1 < numero2) {
+            throw new IllegalArgumentException("O primeiro numero deve"
+			+ "ser menor que o segundo");
+        }
+
+        if (numero2 < 0) {
+            throw new IllegalArgumentException("Numero 2 invalido");
+        }
+
+        int auxiliar1 = numero1;
+        int auxiliar2 = numero2;
+        while (auxiliar1 != auxiliar2) {
+            if (auxiliar1 > auxiliar2) {
+                auxiliar1 = auxilir1 - auxiliar2;
+            } else {
+                auxiliar2 = auxiliar2 - auxiliar1;
+            }
+        }
+
+        return auxiliar1;
+    }
+
+    /**
+     * Regra de Horner para avaliação polinomial.
+     * @param numero variável para obter uma aproximação
+     * @param tam tamanho do polinômio
+     * @param array coeficientes do polinômio
+     * @throws IllegalArgumentException caso g seja menor que 1
+     * @return o valor calculado pelo método de horner
+     */
+    public static int horner(final int numero,
+                             final int tam, final int[] array) {
+        final int tamMinimo = 1;
+        if (tam < tamMinimo) {
+            throw new IllegalArgumentException("Tamanho invalido");
+        }
+        if (array == null) {
+            throw new IllegalArgumentException("array is null");
+        }
+
+        int polinomio = array[tam];
+        int contador = tam - 1;
+
+        while (contador >= 0) {
+            polinomio = polinomio * numero + array[contador];
+            contador = contador - 1;
+        }
+
+        return polinomio;
+    }
+
+    /**
+     * Algoritmo que calcula o n-esimo número de Fibonacci.
+     * @param enesimoTermo variável a ser calculada
+     * @throws IllegalArgumentException caso entrada seja menor que 0
+     * @return o n-esimo número de Fibonacci
+     */
+    public static int fibonacci(final int enesimoTermo) {
+        if (enesimoTermo < 0) {
+            throw new IllegalArgumentException("Intervalo do numero invalido");
+        }
+
+        if (enesimoTermo == 0 || enesimoTermo == 1) {
+            return enesimoTermo;
+        }
+
+        int proxTermo = 0;
+        int atualTermo = 1;
+        int contador = 2;
+        while (contador <= enesimoTermo) {
+            final int t = atualTermo;
+            atualTermo = atualTermo + proxTermo;
+            proxTermo = t;
+            contador += 1;
+        }
+
+        return atualTermo;
+    }
+
+    /**
+     * Transforma cpf em string
+     * @param d cpf como string
+     * @return cpf como vetor
+     */
+    public static int[] cpfStringToArray(final String d) {
+        final int aux11 = 11;
+        int[] cpf = new int[aux11];
+        for (int i = 0; i < d.length(); i++) {
+            cpf[i] = Character.getNumericValue(d.charAt(i));
+        }
+        return cpf;
+    }
+
+    /**
+     * Algoritmo que certifica se o CPF é válido.
+     * @param cpf CPF a ser verificado
+     * @throws IllegalArgumentException caso entrada tenha
+     * mais ou menos que 11 dígitos
+     * @return caso CPF seja verdadeiro retorna true
+     */
+    public static boolean cpf(final String cpf) {
+        final int aux11 = 11;
+        if (cpf.length() > aux11 || cpf.length() < aux11) {
+            throw new IllegalArgumentException("O CPF deve conter 11 dígitos");
+        }
+
+        final int[] d = cpfStringToArray(cpf);
+        final int terceiroDigito = 3;
+        final int quartoDigito = 4;
+        final int quintoDigito = 5;
+        final int sextoDigito = 6;
+        final int setimoDigito = 7;
+        final int oitavoDigito = 8;
+        final int nonoDigito = 9;
+        final int decimoDigito = 10;
+
+        final int j =  d[0] + 2 * d[1] + terceiroDigito * d[2] + quartoDigito 
+		            * d[terceiroDigito] + quintoDigito * d[quartoDigito] + sextoDigito * d[quintoDigito]
+					+ setimoDigito * d[sextoDigito] + oitavoDigito * d[setimoDigito] + nonoDigito
+					* d[oitavoDigito];
+
+        final int k = d[1] + 2 * d[2] + terceiroDigito * d[terceiroDigito] + quartoDigito
+                    * d[quartoDigito] + quintoDigito * d[quintoDigito] + sextoDigito
+                    * d[sextoDigito] + setimoDigito * d[setimoDigito] + oitavoDigito
+                    * d[oitavoDigito] + nonoDigito * d[nonoDigito];
+
+        final int dj = (j % aux11) % decimoDigito;
+        final int dk = (k % aux11) % decimoDigito;
+
+        return dj == d[nonoDigito] && dk == d[decimoDigito];
+    }
+
+    /**
+     * Algoritmo que certifica se o CPF é válido.
+     * @param cpf CPF a ser verificado
+     * @throws IllegalArgumentException caso entrada tenha
+     * mais ou menos que 11 dígitos
+     * @return caso CPF seja verdadeiro retorna true
+     */
+    public static boolean cpf2(final String cpf) {
+        final int aux11 = 11;
+        if (cpf.length() < aux11 || cpf.length() > aux11) {
+            throw new IllegalArgumentException("O CPF deve conter 11 dígitos");
+        }
+
+        final int[] d = cpfStringToArray(cpf);
+        final int setimoDigito = 7;
+        final int oitavoDigito = 8;
+        final int nonoDigito = 9;
+        final int decimoDigito = 10;
+
+        int aux7 = setimoDigito;
+        int auxiliar1 = d[oitavoDigito];
+        int auxiliar2 = d[oitavoDigito];
+
+        while (aux7 >= 0) {
+            auxiliar1 += d[aux7];
+            auxiliar2 += auxiliar1;
+            aux7 -= 1;
+        }
+
+        final int j = (auxiliar2 % aux11) % decimoDigito;
+        final int k = ((auxiliar2 - auxiliar1 + nonoDigito
+                      * d[nonoDigito]) % aux11) % decimoDigito;
+
+        return j == d[nonoDigito] && k == d[decimoDigito];
+    }
 }
