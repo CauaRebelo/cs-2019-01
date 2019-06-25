@@ -544,6 +544,8 @@ public final class MatematicaUtil {
         final int aux11 = 11;
         int[] cpf = new int[aux11];
         for (int i = 0; i < d.length(); i++) {
+	    // FIXME está convertendo inclusive o que não é dígito, por exemplo, '@', ...
+	    // Verificar se todos os caracteres são dígitos (Character.isDigit pode ser usado para esta finalidade)
             cpf[i] = Character.getNumericValue(d.charAt(i));
         }
         return cpf;
