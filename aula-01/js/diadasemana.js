@@ -32,6 +32,8 @@ function diadasemana(dia, mes, ano) {
         mes += 12;
         ano--;
     }
+    
+    // FIXME o algoritmo parece outro. Cada divisão deve fazer uso de Math.floor e não apenas o resultado final. 
     const c = Math.trunc(dia + 2 * mes + 3 * (mes + 1) / 5 + ano + ano / 4 - ano / 100 + ano / 400);
     return c % 7;
 }
