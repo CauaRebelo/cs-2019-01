@@ -395,10 +395,17 @@ public final class MatematicaUtil {
     }
 
     /**
-     * Verificar se um Array é null
-     * @param array Vetor
+     * FIXME Ajuste a documentação para contemplar o contrato completo do método. 
+     * FIXME a sugestão é incluir se possui pelo menos um elemento.
+     *
+     * Verifica se o argumento é um vetor vazio (não é {@code null}
+     * e possui pelo menos um componente. 
+     
+     * @param array Vetor a ser verificado.
+     * @throws ...
      */
     public static void arrayNull(final int[] array) {
+	// FIXME a verificação abaixo é melhor feita por https://docs.oracle.com/javase/8/docs/api/java/util/Objects.html#requireNonNull-T-
         if (array == null) {
             throw new IllegalArgumentException("array is null");
         }
