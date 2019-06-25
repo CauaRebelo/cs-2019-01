@@ -2,7 +2,7 @@ package com.github.cauarebelo.ufg.cs.aula01;
 import java.time.LocalDate;
 import java.time.DateTimeException;
 /**
- * Aula 1 de cs-2019-01.
+ * Algoritmos uteis de Matematica
 */
 @SuppressWarnings({"PMD.DataflowAnomalyAnalysis", "PMD.AvoidLiteralsInIfCondition"})
 public final class MatematicaUtil {
