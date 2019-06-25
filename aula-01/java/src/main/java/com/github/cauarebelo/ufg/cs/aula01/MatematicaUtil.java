@@ -28,7 +28,7 @@ public final class MatematicaUtil {
         final int auxiliar1 = 100;
         final int div = numero / auxiliar1;
         final int mult = numero % auxiliar1;
-        return numéro == (div + mult) * (div + mult);
+        return numero == (div + mult) * (div + mult);
     }
     /**
      * Aplica a propriedade 153 ao numéro desejado, ou seja, a soma do cubo de
@@ -50,7 +50,7 @@ public final class MatematicaUtil {
         final int ajuda = numero % auxiliar1;
         final int quo = ajuda / auxiliar2;
         final int res = ajuda % auxiliar2;
-        return numéro == div * div * div + quo * quo * quo + res * res * res;
+        return numero == div * div * div + quo * quo * quo + res * res * res;
     }
     /**
      * Informa o dia da semana, sendo 0 segunda e assim por diante.
