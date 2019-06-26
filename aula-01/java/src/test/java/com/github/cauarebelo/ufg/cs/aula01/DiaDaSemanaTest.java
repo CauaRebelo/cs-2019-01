@@ -11,7 +11,9 @@ public class DiaDaSemanaTest {
     @Test
     public void numeroForadaFaixaGeraExcecao() {
         assertThrows(IllegalArgumentException.class, () -> MatematicaUtils.diaDaSemana(22, 16 , 1999));
+        assertThrows(IllegalArgumentException.class, () -> MatematicaUtils.diaDaSemana(22, 0 , 1999));
         assertThrows(IllegalArgumentException.class, () -> MatematicaUtils.diaDaSemana(32, 05 , 2025));
+        assertThrows(IllegalArgumentException.class, () -> MatematicaUtils.diaDaSemana(0, 05 , 2025));
         assertThrows(IllegalArgumentException.class, () -> MatematicaUtils.diaDaSemana(15, 03 , 1658));
         assertThrows(IllegalArgumentException.class, () -> MatematicaUtils.diaDaSemana(29, 02 , 2019));
     }

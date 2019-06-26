@@ -11,6 +11,7 @@ public class Propriedade3025Test {
 	@Test
 	public void numeroForadaFaixaGeraExcecao() {
 		assertThrows(IllegalArgumentException.class, () -> MatematicaUtils.propriedade3025(-1));
+		assertThrows(IllegalArgumentException.class, () -> MatematicaUtils.propriedade3025(1000000));
 	}
 	
 	@Test
