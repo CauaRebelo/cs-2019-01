@@ -2,6 +2,7 @@ package com.github.cauarebelo.ufg.cs.aula01;
 
 import java.time.LocalDate;
 import java.time.DateTimeException;
+import java.util.Objects;
 
 /**
  * Algoritmos uteis de Matematica.
@@ -398,18 +399,24 @@ public final class MatematicaUtils {
     }
 
     /**
-     * Verificar se um Array é null.
-     * @param array Vetor
+     * Verifica se um dado array é considerado nulo
+     * @param array Vetor a ser verificado
+     * @throws IllegalArgumentException Se houver um NullPointerException
      */
     public static void arrayNull(final int[] array) {
         if (array == null) {
-            throw new IllegalArgumentException("array is null");
+        try {
+            Objects.requireNonNull(array);
+        } catch (NullPointerException exp) {
+            throw new IllegalArgumentException("String nula" + exp);
         }
     }
 
     /**
-     * Verifica se um array tem o tamanho errado.
-     * @param array Vetor
+     * Verifica se um array tem o tamanho errado, ou seja se tem um tamanho
+     * menor que 1 (incluindo vazio)
+     * @param array Vetor a ser verificado
+     * @throws IllegalArgumentException Se o tamanho do array for menor que 1
      */
     public static void arrayTamanho(final int[] array) {
         final int arrayTamMin = 1;
