@@ -404,7 +404,6 @@ public final class MatematicaUtils {
      * @throws IllegalArgumentException Se houver um NullPointerException
      */
     public static void arrayNull(final int[] array) {
-        if (array == null) {
         try {
             Objects.requireNonNull(array);
         } catch (NullPointerException exp) {
