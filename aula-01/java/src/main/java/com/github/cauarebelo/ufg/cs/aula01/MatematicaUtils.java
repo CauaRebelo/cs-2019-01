@@ -6,21 +6,21 @@ import java.util.Objects;
 import java.time.temporal.ChronoField;
 
 /**
- * Algoritmos uteis de Matematica.
+ * Algoritmos úteis de Matemática.
 */
-@SuppressWarnings({"PMD.DataflowAnomalyAnalysis", "PMD.AvoidLiteralsInIfCondition"})
+@SuppressWarnings({"PMD.DataflowAnomalyAnalysis"})
 public final class MatematicaUtils {
 
     /**
      * Para checkstyle.
      */
     private MatematicaUtils() {
-    // Esse construtor esta vazio de proposito
+    // Esse construtor está vazio de proposito
     }
 
     /**
-     * Verifica se numéro satisfaz propriedade 3025.
-     * @param numero variavel a ser verificada
+     * Verifica se número satisfaz propriedade 3025.
+     * @param numero variável a ser verificada
      * @throws IllegalArgumentException caso entrada seja menor que 0
      * ou maior que 999
      * @return O valor verdadeiro se o argumento fornecido
@@ -29,7 +29,7 @@ public final class MatematicaUtils {
     public static boolean propriedade3025(final int numero) {
         final int limiteMaximo = 9999;
         if (numero <= 0 || numero > limiteMaximo) {
-            throw new IllegalArgumentException("numero deve ser maior que 0 e menor que 9999");
+            throw new IllegalArgumentException("Número deve ser maior que 0 e menor que 9999");
         }
         final int auxiliar1 = 100;
         final int div = numero / auxiliar1;
@@ -38,18 +38,18 @@ public final class MatematicaUtils {
     }
 
     /**
-     * Aplica a propriedade 153 ao numéro desejado, ou seja, a soma do cubo de
-     * cade um de seus digitos e igual ao propio numéro, um exemplo seria
-     * o propio numéro 153 onde 1^3+5^3+3^3=153.
-     * @param numero Numéro a eser usado na operacao
-     * @throws IllegalArgumentException Se a entrada for nula ou nao definida
-     * @return Se o numéro se aplica a propriedade 153 ou nao
+     * Aplica a propriedade 153 ao número desejado, ou seja, a soma do cubo de
+     * cade um de seus dígitos e igual ao propio número, um exemplo seria
+     * o propio número 153 onde 1^3+5^3+3^3=153.
+     * @param numero Número a eser usado na operação
+     * @throws IllegalArgumentException Se a entrada for nula ou não definida
+     * @return Se o número se aplica a propriedade 153 ou não
     */
     public static boolean propriedade153(final int numero) {
         final int limiteMinimo = 100;
         final int limiteMaximo = 999;
         if (numero <= limiteMinimo || numero >= limiteMaximo) {
-            throw new IllegalArgumentException("Numero deve ser maior que 100 e menor que 999");
+            throw new IllegalArgumentException("Número deve ser maior que 100 e menor que 999");
         }
         final int auxiliar1 = 100;
         final int auxiliar2 = 10;
@@ -65,8 +65,8 @@ public final class MatematicaUtils {
      * @param dia Dia desejado
      * @param mes O mês desejado
      * @param ano O ano desejado
-     * @throws IllegalArgumentException Se a data nao for válida
-     * @return Retorna o dia da semana, sendo 0 segunda ate 6 como domingo
+     * @throws IllegalArgumentException Se a data não for válida
+     * @return Retorna o dia da semana, sendo 0 segunda até 6 como domingo
     */
     public static int diaDaSemana(final int dia, final int mes, final int ano) {
         dataInval(dia, mes, ano);
@@ -83,7 +83,6 @@ public final class MatematicaUtils {
     }
 
     /**
-     * @throws IllegalArgumentException Se houver uma DataTimeException
      * Informa se a data fornecida é inválida
      * @param dia Dia fornecido
      * @param mes Mês fornecido
@@ -117,17 +116,17 @@ public final class MatematicaUtils {
     }
 
     /**
-     * Encontra o módulo, ou seja resto da divisão, de um tal numéro
+     * Encontra o módulo, ou seja resto da divisão, de um tal número
      * com seu divisor.
-     * @param dividendo Numéro que vai ser aplicado o módulo
-     * @param divisor Numéro que vai dividir o dividendo
+     * @param dividendo Número que vai ser aplicado o módulo
+     * @param divisor Número que vai dividir o dividendo
      * @throws IllegalArgumentException Se o dividendo for menor ou igual
      * a 0 ou se o divisor for menor que 0
      * @return Retorna o módulo, ou seja, resto da divisão
     */
     public static int mod(final int dividendo, final int divisor) {
         if (dividendo < 0 || divisor <= 0) {
-            throw new IllegalArgumentException("Dividendo ou divisor invalido");
+            throw new IllegalArgumentException("Dividendo ou divisor inválido");
         }
         int resto = dividendo;
         while (resto >= divisor) {
@@ -138,14 +137,14 @@ public final class MatematicaUtils {
 
     /**
      * Calcula a soma dos primeiros naturais, N = {0, 1, 2 ...}.
-     * @param numero A quantidade dos primeiros numéros naturais somados
-     * @throws IllegalArgumentException Se o numéro for menor que 1
+     * @param numero A quantidade dos primeiros números naturais somados
+     * @throws IllegalArgumentException Se o número for menor que 1
      * @return Retorna o resultado da soma
     */
     public static int somaNaturais(final int numero) {
         final int somaMaxima = 1;
         if (numero < somaMaxima) {
-            throw new IllegalArgumentException("Numero deve ser maior que 0");
+            throw new IllegalArgumentException("Número deve ser maior que 0");
         }
         int a = 2;
         int b = 1;
@@ -157,16 +156,16 @@ public final class MatematicaUtils {
     }
 
     /**
-     * Multiplicar a quantidade de numéro naturais em ordem baseado no
-     * numéro dado pelo usuário.
-     * @param numero A quantidade de numéros naturais a serem somados
-     * @throws IllegalArgumentException Se numéro for menor que 1
-     * @return Retorna o Fatorial do numéro
+     * Multiplicar a quantidade de número naturais em ordem baseado no
+     * número dado pelo usuário.
+     * @param numero A quantidade de números naturais a serem somados
+     * @throws IllegalArgumentException Se número for menor que 1
+     * @return Retorna o Fatorial do número
     */
     public static int fatorial(final int numero) {
         final int numeroMaximo = 1;
         if (numero < numeroMaximo) {
-            throw new IllegalArgumentException("Numero deve ser maior que 0");
+            throw new IllegalArgumentException("Número deve ser maior que 0");
         }
         int a = 2;
         int b = 1;
@@ -178,18 +177,18 @@ public final class MatematicaUtils {
     }
 
     /**
-     * Multiplica dois numéro, somando o primeiro numéro com ele mêsmo
-     * baseado no multiplicador, retornando o resultado da multiplicacao.
-     * @param multcando O numéro a ser somado multiplicador vezes
+     * Multiplica dois número, somando o primeiro número com ele mesmo
+     * baseado no multiplicador, retornando o resultado da multiplicação.
+     * @param multcando O número a ser somado multiplicador vezes
      * @param multcador A quantidade de vezes que o multiplicando
-     * vai ser somado com ele mêsmo
+     * vai ser somado com ele mesmo
      * @throws IllegalArgumentException Se a for menor que zero ou b for
      * menor que zero
      * @return Retorna o resultado da soma, ou seja o resultado do produto
     */
     public static int produto(final int multcando, final int  multcador) {
         if (multcando < 0 || multcador < 0) {
-            throw new IllegalArgumentException("numéros devem ser maior que 0");
+            throw new IllegalArgumentException("Números devem ser maior que 0");
         }
         int c = multcando;
         int d = multcador;
@@ -207,14 +206,14 @@ public final class MatematicaUtils {
     }
 
     /**
-     * Multiplica o primeiro numéro com ele mêsmo baseado no expoente,
-     * conhecido como potencia, ou efetivamente base ^ expoente.
-     * @param base O numéro a ser multiplicado expoente vezes
+     * Multiplica o primeiro número com ele mesmo baseado no expoente,
+     * conhecido como potência, ou efetivamente base ^ expoente.
+     * @param base O número a ser multiplicado expoente vezes
      * @param expoente A quantidade de vezes que a vai ser multiplicado
      * com ele mêsmo
      * @throws IllegalArgumentException Se a for menor que zero ou b
      * for menor que zero
-     * @return Retorna o resultado da multiplicacao, ou seja, sua potencia
+     * @return Retorna o resultado da multiplicação, ou seja, sua potência
     */
     public static int potencia(final int base, final int expoente) {
         if (base < 0 || expoente < 0) {
@@ -230,14 +229,14 @@ public final class MatematicaUtils {
     }
 
     /**
-     * Retorna o pi com uma precisao baseada no numéro.
-     * @param numero Precisao do resultado
-     * @throws IllegalArgumentException Se numéro for menor ou igual a 1
-     * @return Retorna pi com numéro precisao
+     * Retorna o pi com uma precisão baseada no número.
+     * @param numero Precisão do resultado
+     * @throws IllegalArgumentException Se número for menor ou igual a 1
+     * @return Retorna pi com número precisão
     */
     public static int pi(final int numero) {
         if (numero <= 1) {
-            throw new IllegalArgumentException("numéro deve ser maior que 1");
+            throw new IllegalArgumentException("Número deve ser maior que 1");
         }
         final int auxiliar1 = 4;
         int i = 1;
@@ -254,16 +253,16 @@ public final class MatematicaUtils {
     }
 
     /**
-     * Retorna o logaritmo natural de numéro com certa precisao.
-     * @param numero numéro a ser usado no logaritmo natural
-     * @param precisao Precisao do resultado
-     * @throws IllegalArgumentException Se numéro for menor que 1 ou se
-     * precisao for menor que 2
-     * @return Retorna o logaritmo natural limitado a precisao
+     * Retorna o logaritmo natural de número com certa precisão.
+     * @param numero número a ser usado no logaritmo natural
+     * @param precisao Precisão do resultado
+     * @throws IllegalArgumentException Se número for menor que 1 ou se
+     * precisão for menor que 2
+     * @return Retorna o logaritmo natural limitado a precisão
     */
     public static int logaritmoNatural(final int numero, final int precisao) {
         if (numero < 1 || precisao < 2) {
-            throw new IllegalArgumentException("numero deve ser maior que 0 e precisao maior que 1");
+            throw new IllegalArgumentException("Número deve ser maior que 0 e precião maior que 1");
         }
         int i = 2;
         int e = 1 + numero;
@@ -279,20 +278,20 @@ public final class MatematicaUtils {
     }
 
     /**
-     * Retorna a razao aurea de 2 numéros, ou seja, somar dois numéros,
-     * e logo em seguida somar os dois ultimos numéros dado pela razao,
-     * ate chegar nos ultimos definidos por k, numéro dado pelo usuario,
-     * e faz a razao dos dois ultimos numéros.
-     * @param num Primeiro numéro a ser somado
-     * @param num2 Segundo numéro a ser somado
-     * @param qua A quantidade de vezes que serao somados
+     * Retorna a razão aurea de 2 números, ou seja, somar dois números,
+     * e logo em seguida somar os dois últimos números dado pela razão,
+     * até chegar nos últimos definidos por k, número dado pelo usuario,
+     * e faz a razão dos dois últimos números.
+     * @param num Primeiro número a ser somado
+     * @param num2 Segundo número a ser somado
+     * @param qua A quantidade de vezes que serão somados
      * @throws IllegalArgumentException Se x for menor que 0 ou se y for
      * menor que x ou se k for menor que 0
-     * @return Retorna o resultado da razao aurea
+     * @return Retorna o resultado da razão áurea
     */
     public static int razaoAurea(final int num, final int num2, final int qua) {
         if (num < 0 || num2 < num || qua < 0) {
-            throw new IllegalArgumentException("Numeros invalidos");
+            throw new IllegalArgumentException("Números inválidos");
         }
         int c = num2;
         int a = num;
@@ -308,15 +307,15 @@ public final class MatematicaUtils {
     }
 
     /**
-     * Descobre se o numéro é um quadrado perfeito.
-     * @param numero O numéro que o usuario deseja saber se faz parte dos
-     * numéros que são quadrados perfeitos
+     * Descobre se o número é um quadrado perfeito.
+     * @param numero O número que o usuario deseja saber se faz parte dos
+     * números que são quadrados perfeitos
      * @throws IllegalArgumentException Se n for menor que 1
-     * @return Define se o numero e quadrado perfeito ou nao
+     * @return Define se o número e quadrado perfeito ou não
     */
     public static boolean quadradoPerfeito(final int numero) {
         if (numero <= 0) {
-            throw new IllegalArgumentException("Numero fora da faixa esperada");
+            throw new IllegalArgumentException("Número fora da faixa esperada");
         }
         int i = 1;
         int s = 1;
@@ -328,16 +327,16 @@ public final class MatematicaUtils {
     }
 
     /**
-     * Calcula a raiz quadrada de um numéro com uma certa precisao,
+     * Calcula a raiz quadrada de um número com uma certa precisão,
      * sendo os dois dados pelo usuario.
-     * @param numero O numéro que sera aplicada a raiz quadrada
-     * @param precisao Precisao da operacao
+     * @param numero O número que sera aplicada a raiz quadrada
+     * @param precisao Precisão da operação
      * @throws IllegalArgumentException Se n ou i forem menor que 0
      * @return Retorna a raiz quadrada de n
     */
     public static int raiz(final int numero, final int precisao) {
         if (numero < 0 || precisao < 0) {
-            throw new IllegalArgumentException("numéro ou precisao invalidos");
+            throw new IllegalArgumentException("Número ou precisão inválidos");
         }
         int r = 1;
         int k = precisao;
@@ -349,8 +348,8 @@ public final class MatematicaUtils {
     }
 
     /**
-     * Calcula se um numéro é primo.
-     * @param numero número a ser calculado
+     * Calcula se um número é primo.
+     * @param numero Número a ser calculado
      * @throws IllegalArgumentException caso entrada seja menor que 1
      * @return true caso entrada seja um número primo
      */
@@ -374,11 +373,11 @@ public final class MatematicaUtils {
     }
 
     /**
-     * Algoritmo que encontra números primos.
-     * @param array vetor de zeros com o tamanho do número a ser checado
+     * Encontra números primos.
+     * @param array Vetor de zeros com o tamanho do número a ser checado
      * @throws IllegalArgumentException caso o tamanho do vetor for
      * menor ou igual a 1 ou vetor não estiver zerado
-     * @return vetor com resultado calculado
+     * @return Vetor com resultado calculado
      */
     public static int[] crivoEratostenes(final int[] array) {
         arrayNull(array);
@@ -430,21 +429,21 @@ public final class MatematicaUtils {
 
     /**
      * Calcula o maior divisor comum entre a e b.
-     * @param numero1 número inteiro que será utilizado para o mdc
-     * @param numero2 número inteiro que será utilizado para o mdc
-     * @throws IllegalArgumentException caso b seja maior que a,
+     * @param numero1 Número inteiro que será utilizado para o mdc
+     * @param numero2 Número inteiro que será utilizado para o mdc
+     * @throws IllegalArgumentException Caso b seja maior que a,
      * ou b menor que 0
-     * @return o valor do mdc entre a e b
+     * @return O valor do mdc entre a e b
      */
     public static int mdc(final int numero1, final int numero2) {
 
         if (numero1 < numero2) {
-            throw new IllegalArgumentException("O primeiro numero deve"
+            throw new IllegalArgumentException("O primeiro número deve"
                               + "ser menor que o segundo");
         }
 
         if (numero2 < 0) {
-            throw new IllegalArgumentException("Numero 2 invalido");
+            throw new IllegalArgumentException("Número 2 inválido");
         }
 
         int auxiliar1 = numero1;
@@ -461,11 +460,11 @@ public final class MatematicaUtils {
 
     /**
      * Calcula outra forma de achar o maior divisor comum entre a e b.
-     * @param numero1 número inteiro que será utilizado para o mdc
-     * @param numero2 número inteiro que será utilizado para o mdc
-     * @throws IllegalArgumentException caso b seja maior que a,
+     * @param numero1 Número inteiro que será utilizado para o mdc
+     * @param numero2 Número inteiro que será utilizado para o mdc
+     * @throws IllegalArgumentException Caso b seja maior que a,
      * ou b menor que 0
-     * @return o valor do mdc
+     * @return O valor do mdc
      */
     public static int mdc2(final int numero1, final int numero2) {
 
@@ -493,11 +492,11 @@ public final class MatematicaUtils {
 
     /**
      * Regra de Horner para avaliação polinomial.
-     * @param numero variável para obter uma aproximação
-     * @param tam tamanho do polinômio
-     * @param array coeficientes do polinômio
-     * @throws IllegalArgumentException caso g seja menor que 1
-     * @return o valor calculado pelo método de horner
+     * @param numero Variável para obter uma aproximação
+     * @param tam Tamanho do polinômio
+     * @param array Coeficientes do polinômio
+     * @throws IllegalArgumentException Caso g seja menor que 1
+     * @return O valor calculado pelo método de horner
      */
     public static int horner(final int numero,
                              final int tam, final int[] array) {
@@ -522,13 +521,13 @@ public final class MatematicaUtils {
 
     /**
      * Algoritmo que calcula o n-esimo número de Fibonacci.
-     * @param enesimoTermo variável a ser calculada
-     * @throws IllegalArgumentException caso entrada seja menor que 0
-     * @return o n-esimo número de Fibonacci
+     * @param enesimoTermo Variável a ser calculada
+     * @throws IllegalArgumentException Caso entrada seja menor que 0
+     * @return O n-esimo número de Fibonacci
      */
     public static int fibonacci(final int enesimoTermo) {
         if (enesimoTermo < 0) {
-            throw new IllegalArgumentException("Intervalo do numero invalido");
+            throw new IllegalArgumentException("Intervalo do número inválido");
         }
 
         if (enesimoTermo == 0 || enesimoTermo == 1) {
@@ -563,11 +562,11 @@ public final class MatematicaUtils {
     }
 
     /**
-     * Algoritmo que certifica se o CPF é válido.
+     * Certifica se o CPF é válido.
      * @param cpf CPF a ser verificado
-     * @throws IllegalArgumentException caso entrada tenha
+     * @throws IllegalArgumentException Caso entrada tenha
      * mais ou menos que 11 dígitos
-     * @return caso CPF seja verdadeiro retorna true
+     * @return Caso CPF seja verdadeiro retorna true
      */
     public static boolean cpf(final String cpf) {
         final int aux11 = 11;
@@ -604,9 +603,9 @@ public final class MatematicaUtils {
     /**
      * Algoritmo que certifica se o CPF é válido.
      * @param cpf CPF a ser verificado
-     * @throws IllegalArgumentException caso entrada tenha
+     * @throws IllegalArgumentException Caso entrada tenha
      * mais ou menos que 11 dígitos
-     * @return caso CPF seja verdadeiro retorna true
+     * @return Caso CPF seja verdadeiro retorna true
      */
     public static boolean cpf2(final String cpf) {
         final int aux11 = 11;
