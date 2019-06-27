@@ -3,6 +3,7 @@ package com.github.cauarebelo.ufg.cs.aula01;
 import java.time.LocalDate;
 import java.time.DateTimeException;
 import java.util.Objects;
+import java.time.temporal.ChronoField;
 
 /**
  * Algoritmos uteis de Matematica.
@@ -82,28 +83,31 @@ public final class MatematicaUtils {
     }
 
     /**
-     * Informa se a data e inválida.
-     * @param dia Dia desejado
-     * @param mes O mês desejado
-     * @param ano O ano desejado
-     * @throws IllegalArgumentException Se o dia nao for valido
-     * @throws IllegalArgumentException Se o mês nao for valido
-     * @throws IllegalArgumentException Se o ano nao for valido
      * @throws IllegalArgumentException Se houver uma DataTimeException
+     * Informa se a data fornecida é inválida
+     * @param dia Dia fornecido
+     * @param mes Mês fornecido
+     * @param ano Ano fornecido
+     * @throws IllegalArgumentException Se o dia não for válido
+     * @throws IllegalArgumentException Se o mês não for válido
+     * @throws IllegalArgumentException Se o ano não for válido
+     * @throws IllegalArgumentException Se a data fornecida não
+     * for válida
     */
     public static void dataInval(final int dia, final int mes, final int ano) {
         final int diaMax = 31;
         if (dia < 1 || dia > diaMax) {
-            throw new IllegalArgumentException("Dia invalido");
+            throw new IllegalArgumentException("Dia inválido");
         }
         final int mesMax = 12;
         if (mes < 1 || mes > mesMax) {
-            throw new IllegalArgumentException("mês invalido");
+            throw new IllegalArgumentException("Mês inválido");
         }
         final int anoMinimo = 1753;
         if (anoMinimo >= ano) {
-            throw new IllegalArgumentException("Ano invalido");
+            throw new IllegalArgumentException("Ano inválido");
         }
+
         try {
             LocalDate.of(ano, mes, dia);
         } catch (DateTimeException exp) {
@@ -401,7 +405,7 @@ public final class MatematicaUtils {
     /**
      * Verifica se um dado array é considerado nulo
      * @param array Vetor a ser verificado
-     * @throws IllegalArgumentException Se houver um NullPointerException
+     * @throws IllegalArgumentException Se o vetor for nulo
      */
     public static void arrayNull(final int[] array) {
         try {
