@@ -550,12 +550,18 @@ public final class MatematicaUtils {
     /**
      * Transforma cpf em string.
      * @param d cpf como string
+     * @throws IllegalArgumentException Se o CPF não for composto
+     * de dígitos apenas
      * @return cpf como vetor
      */
     public static int[] cpfStringToArray(final String d) {
         final int tamCpf = 11;
         int[] cpf = new int[tamCpf];
         for (int i = 0; i < d.length(); i++) {
+            if(!Character.isDigit(d.charAt(i))) {
+                throw new IllegalArgumentException
+                ("O CPF deve ser composto apenas de números");
+            }
             cpf[i] = Character.getNumericValue(d.charAt(i));
         }
         return cpf;
