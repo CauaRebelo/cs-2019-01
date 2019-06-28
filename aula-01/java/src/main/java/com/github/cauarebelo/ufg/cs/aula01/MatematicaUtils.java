@@ -553,8 +553,8 @@ public final class MatematicaUtils {
      * @return cpf como vetor
      */
     public static int[] cpfStringToArray(final String d) {
-        final int aux11 = 11;
-        int[] cpf = new int[aux11];
+        final int tamCpf = 11;
+        int[] cpf = new int[tamCpf];
         for (int i = 0; i < d.length(); i++) {
             cpf[i] = Character.getNumericValue(d.charAt(i));
         }
@@ -569,35 +569,35 @@ public final class MatematicaUtils {
      * @return Caso CPF seja verdadeiro retorna true
      */
     public static boolean cpf(final String cpf) {
-        final int aux11 = 11;
-        if (cpf.length() > aux11 || cpf.length() < aux11) {
+        final int tamCpf = 11;
+        if (cpf.length() != tamCpf) {
             throw new IllegalArgumentException("O CPF deve conter 11 dígitos");
         }
 
         final int[] d = cpfStringToArray(cpf);
-        final int terceiroDigito = 3;
-        final int quartoDigito = 4;
-        final int quintoDigito = 5;
-        final int sextoDigito = 6;
-        final int setimoDigito = 7;
-        final int oitavoDigito = 8;
-        final int nonoDigito = 9;
-        final int decimoDigito = 10;
+        final int terceiroIndice = 3;
+        final int quartoIndice = 4;
+        final int quintoIndice = 5;
+        final int sextoIndice = 6;
+        final int setimoIndice = 7;
+        final int oitavoIndice = 8;
+        final int nonoIndice = 9;
+        final int decimoIndice = 10;
 
-        final int j = d[0] + 2 * d[1] + terceiroDigito * d[2] + quartoDigito
-                            * d[terceiroDigito] + quintoDigito * d[quartoDigito] + sextoDigito * d[quintoDigito]
-                            + setimoDigito * d[sextoDigito] + oitavoDigito * d[setimoDigito] + nonoDigito
-                            * d[oitavoDigito];
+        final int j = d[0] + 2 * d[1] + terceiroIndice * d[2] + quartoIndice
+                            * d[terceiroIndice] + quintoIndice * d[quartoIndice] + sextoIndice * d[quintoIndice]
+                            + setimoIndice * d[sextoIndice] + oitavoIndice * d[setimoIndice] + nonoIndice
+                            * d[oitavoIndice];
 
-        final int k = d[1] + 2 * d[2] + terceiroDigito * d[terceiroDigito] + quartoDigito
-                    * d[quartoDigito] + quintoDigito * d[quintoDigito] + sextoDigito
-                    * d[sextoDigito] + setimoDigito * d[setimoDigito] + oitavoDigito
-                    * d[oitavoDigito] + nonoDigito * d[nonoDigito];
+        final int k = d[1] + 2 * d[2] + terceiroIndice * d[terceiroIndice] + quartoIndice
+                    * d[quartoIndice] + quintoIndice * d[quintoIndice] + sextoIndice
+                    * d[sextoIndice] + setimoIndice * d[setimoIndice] + oitavoIndice
+                    * d[oitavoIndice] + nonoIndice * d[nonoIndice];
 
-        final int dj = (j % aux11) % decimoDigito;
-        final int dk = (k % aux11) % decimoDigito;
+        final int dj = (j % tamCpf) % decimoIndice;
+        final int dk = (k % tamCpf) % decimoIndice;
 
-        return dj == d[nonoDigito] && dk == d[decimoDigito];
+        return dj == d[nonoIndice] && dk == d[decimoIndice];
     }
 
     /**
@@ -608,20 +608,20 @@ public final class MatematicaUtils {
      * @return Caso CPF seja verdadeiro retorna true
      */
     public static boolean cpf2(final String cpf) {
-        final int aux11 = 11;
-        if (cpf.length() < aux11 || cpf.length() > aux11) {
+        final int tamCpf = 11;
+        if (cpf.length() != tamCpf) {
             throw new IllegalArgumentException("O CPF deve conter 11 dígitos");
         }
 
         final int[] d = cpfStringToArray(cpf);
-        final int setimoDigito = 7;
-        final int oitavoDigito = 8;
-        final int nonoDigito = 9;
-        final int decimoDigito = 10;
+        final int setimoIndice = 7;
+        final int oitavoIndice = 8;
+        final int nonoIndice = 9;
+        final int decimoIndice = 10;
 
-        int aux7 = setimoDigito;
-        int auxiliar1 = d[oitavoDigito];
-        int auxiliar2 = d[oitavoDigito];
+        int aux7 = setimoIndice;
+        int auxiliar1 = d[oitavoIndice];
+        int auxiliar2 = d[oitavoIndice];
 
         while (aux7 >= 0) {
             auxiliar1 += d[aux7];
@@ -629,11 +629,11 @@ public final class MatematicaUtils {
             aux7 -= 1;
         }
 
-        final int j = (auxiliar2 % aux11) % decimoDigito;
-        final int k = ((auxiliar2 - auxiliar1 + nonoDigito
-                      * d[nonoDigito]) % aux11) % decimoDigito;
+        final int j = (auxiliar2 % tamCpf) % decimoIndice;
+        final int k = ((auxiliar2 - auxiliar1 + nonoIndice
+                      * d[nonoIndice]) % tamCpf) % decimoIndice;
 
-        return j == d[nonoDigito] && k == d[decimoDigito];
+        return j == d[nonoIndice] && k == d[decimoIndice];
     }
 }
 
