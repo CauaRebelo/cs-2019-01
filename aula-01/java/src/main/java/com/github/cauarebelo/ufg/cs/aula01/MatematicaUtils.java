@@ -98,8 +98,9 @@ public final class MatematicaUtils {
         if (dia < 1 || dia > diaMax) {
             throw new IllegalArgumentException("Dia inválido");
         }
-        final int mesMax = 12;
-        if (mes < 1 || mes > mesMax) {
+        final int janeiro = 1;
+        final int dezembro = 12;
+        if (mes < janeiro || mes > dezembro) {
             throw new IllegalArgumentException("Mês inválido");
         }
         final int anoMinimo = 1753;
