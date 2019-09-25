@@ -1,28 +1,30 @@
 /**
- * Verifica se o argumento fornecido corresponde a um cpf v·lido.
+ * Verifica se o argumento fornecido corresponde a um cpf v√°lido.
  *
  * @param {number} d cpf a ser verificado.
  * @throws {RangeError} Se o argumento fornecido estiver fora da faixa.
  * @throws {Error} Se o argumento fornecido for nulo ou indefinido.
- * @throws {TypeError} Se o argumento fornecido n„o for um n˙mero.
+ * @throws {TypeError} Se o argumento fornecido n√£o for um n√∫mero.
  * @throws {RangeError} Se o argumento fornecido for nulo ou indefinido. 
  * @returns {boolean}  Retorna verdadeiro se o CPF for valido e falso se for invalido
  */
 function cpf(d) {
-
+  // FIXME verificar se undefined ou null
+  // FIXME verificar se √© um array 
+  // Array.isArray(d)
     for (var i = 0; i < 11; i++) {
 
         if (d[i] == null || d[i] == undefined) {
-            throw new Error("Um ou mais valores fornecidos nulo ou n„o definido.");
+            throw new Error("Um ou mais valores fornecidos nulo ou n√£o definido.");
         }
         if (d[i] > 9 || d[i] < 0) {
             throw new RangeError("Um ou mais valores fornecidos fora da faixa.");
         }
         if (typeof(d[i]) !== "number") {
-            throw new TypeError("Um ou mais valores fornecidos n„o È um n˙mero.");
+            throw new TypeError("Um ou mais valores fornecidos n√£o √© um n√∫mero.");
         }
         if (d[i] != Math.trunc(d[i])) {
-            throw new RangeError("Um ou mais valores fornecidos n„o È um n˙mero inteiro.");
+            throw new RangeError("Um ou mais valores fornecidos n√£o √© um n√∫mero inteiro.");
         }
     }
 
