@@ -1,8 +1,12 @@
 /**
- * Aplica a propriedade 3025 ao numero desejado, ou seja, a soma de seus dois primeiros digitos
- * com os dois ultimos digitos é igual a um numero cujo o seu quadrado deve ser igual ao numero original,
- * um  exemplo obvio e o propio numero 3025, onde: 30 + 25 = 55, 55^2 = 3025
+ * TODO observe a diferença em relação à versão anterior....
+ * Verifica se o número fornecido satisfaz a propriedade denominada 3025. 
+ * Um número inteiro satisfaz esta propriedade se o quadrado da soma 
+ * X + Y resulta no número inteiro fornecido, onde X é o
+ * número definido pelos dois primeiros dígitos do número fornecido, 
+ * enquanto Y é o número definido pelos dois últimos dígitos do número fornecido. 
  * 
+ * FIXME acentos em português não é opcional 
  * @param {number} numero Numero a eser usado na operacao
  * 
  * @returns {boolean} Se o numero se aplica a propriedade 3025 ou nao
@@ -30,4 +34,5 @@ function propriedade3025(numero) {
     const c = numero % 100;
     return numero == Math.pow(b + c, 2);
 }
+
 module.exports = propriedade3025;
