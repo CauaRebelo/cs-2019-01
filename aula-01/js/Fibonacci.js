@@ -1,10 +1,10 @@
 /**
- * Calcula o número na sequência fibonacci do indice fornecido.
+ * Calcula o nÃºmero na sequÃªncia fibonacci do indice fornecido.
  *
- * @param {number} indice do número a ser calculado.
+ * @param {number} indice do nÃºmero a ser calculado.
  * @throws {RangeError} Se o argumento fornecido estiver fora da faixa.
  * @throws {Error} Se o argumento fornecido for nulo ou indefinido.
- * @throws {TypeError} Se o argumento fornecido não for um número.
+ * @throws {TypeError} Se o argumento fornecido nÃ£o for um nÃºmero.
  * @throws {RangeError} Se o argumento fornecido for nulo ou indefinido. 
  * @returns {number}  O valor do indice na sequencia fibonacci.
  */
@@ -13,13 +13,15 @@ function fibonacci(n) {
         throw new RangeError("valor fora  da faixa: " + n);
     }
     if (n == null || n == undefined) {
-        throw new Error("Valor informado é nulo ou não definido: " + n)
+        throw new Error("Valor informado Ã© nulo ou nÃ£o definido: " + n)
     }
     if (typeof(n) !== "number") {
-        throw new TypeError("Valor informado não é um número" + n);
+        throw new TypeError("Valor informado nÃ£o Ã© um nÃºmero" + n);
     }
+    
+    // FIXME Number.isInteger em vez da comparaÃ§Ã£o abaixo
     if (n != Math.trunc(n)) {
-        throw new RangeError("Valor informado não é um número inteiro" + n);
+        throw new RangeError("Valor informado nÃ£o Ã© um nÃºmero inteiro" + n);
     }
     let a = 0;
     let c = 1;
